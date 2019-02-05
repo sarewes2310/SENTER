@@ -142,6 +142,9 @@
     .top{
         padding-top: calc(100% / 6);
     }
+    ul {
+        font-size: 0.7em;
+    }
 }
 
 @media only screen and (min-width: 1280px){
@@ -212,6 +215,9 @@
     }
     .top{
         padding-top: calc(100% / 7);
+    }
+    ul {
+        font-size: 1em;
     }
 }
 
@@ -303,4 +309,26 @@ body{
       float: right;
       width: 100%;
       color:white;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+  
+  li {
+      float: right;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  li a:hover {
+      background-color: #111;
   }

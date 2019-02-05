@@ -1,0 +1,144 @@
+Starting Jedi Python language engine.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'
+##########Linting Output - pylint##########
+************* Module 1crawl_data
+86,0,warning,W1401:Anomalous backslash in string: '\s'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\w'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\/'. String constant might be missing an r prefix.
+91,0,warning,W1401:Anomalous backslash in string: '\S'. String constant might be missing an r prefix.
+96,8,warning,W0612:Unused variable 'index'
+107,8,warning,W0612:Unused variable 'index'

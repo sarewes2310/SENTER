@@ -3,7 +3,7 @@
 SENTET adalah sebuah library yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. 
 # Installation
 sdasda
-# Train
+# Train / Pre-Trained
 sdasda
 # API
 sdasda

@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    
+@media only screen and (min-width: 320px) and (max-width: 764px){
+    .wrap{
+        width: 60%;
+        position: sticky;
+        align-self: center;
+        top: 0;
+        left: 0;
+    }
+    .img{
+        width: calc(100% / 1.5);
+    }
+    #navbar {
+        overflow: hidden;
+        padding: 1% 2%;
+    }
+    .item-s-1{
+        /*background: red;*/
+        width: calc(100% / 12);
+        flex-grow: 1;
+    }
+    .item-s-2{
+        width: calc(100% / 10);
+        flex-grow: 2;
+    }
+    .item-s-3{
+        width: calc(100% / 9);
+        flex-grow: 3;
+    }
+    .item-s-4{
+        width: calc(100% / 8);
+        flex-grow: 4;
+    }
+    .item-s-5{
+        width: calc(100% / 7);
+        flex-grow: 5;
+    }
+    .item-s-6{
+        width: calc(100% / 6);
+        flex-grow: 6;
+    }
+    .item-s-7{
+        width: calc(100% / 5);
+        flex-grow: 7;
+    }
+    .item-s-8{
+        width: calc(100% / 4);
+        flex-grow: 8;
+    }
+    .item-s-9{
+        width: calc(100% / 3);
+        flex-grow: 9;
+    }
+    .item-s-10{
+        width: calc(100% / 2);
+        flex-grow: 10;
+    }
+    .item-s-11{
+        width: calc(100% / 1);
+        flex-grow: 11;
+    }
+    .item-s-12{
+        width: 100%;
+        flex-grow: 12;
+    }
+    .bing-img{
+        padding: 1% 0%;
+    }
+    .thmBackg{
+        margin-top: calc(100% / 6);
+    }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 1280px){
+    .wrap{
+        width: 55%;
+        position: sticky;
+        align-self: center;
+        top: 0;
+        left: 0;
+    }
+    .img{
+        width: calc(100%/2);     
+    }
+    #navbar {
+        overflow: hidden;
+        padding: 0.5%;
+    }
+    .item-m-1{
+        /*background: red;*/
+        width: calc(100% / 12);
+        flex-grow: 1;
+    }
+    .item-m-2{
+        width: calc(100% / 10);
+        flex-grow: 2;
+    }
+    .item-m-3{
+        width: calc(100% / 9);
+        flex-grow: 3;
+    }
+    .item-m-4{
+        width: calc(100% / 8);
+        flex-grow: 4;
+    }
+    .item-m-5{
+        width: calc(100% / 7);
+        flex-grow: 5;
+    }
+    .item-m-6{
+        width: calc(100% / 6);
+        flex-grow: 6;
+    }
+    .item-m-7{
+        width: calc(100% / 5);
+        flex-grow: 7;
+    }
+    .item-m-8{
+        width: calc(100% / 4);
+        flex-grow: 8;
+    }
+    .item-m-9{
+        width: calc(100% / 3);
+        flex-grow: 9;
+    }
+    .item-m-10{
+        width: calc(100% / 2);
+        flex-grow: 10;
+    }
+    .item-m-11{
+        width: calc(100% / 1);
+        flex-grow: 11;
+    }
+    .item-m-12{
+        width: 100%;
+        flex-grow: 12;
+    }
+    .thmBackg{
+        margin-top: calc(100% / 6);
+    }
+    .top{
+        padding-top: calc(100% / 6);
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .wrap{
+        width: 30%;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+    .img{
+        width: calc(100%/3);
+    }
+    #navbar {
+        overflow: hidden;
+        padding: 0.5%;
+    }
+    .item-l-1{
+        /*background: red;*/
+        width: calc(100% / 12);
+        flex-grow: 1;
+    }
+    .item-l-2{
+        width: calc(100% / 10);
+        flex-grow: 2;
+    }
+    .item-l-3{
+        width: calc(100% / 9);
+        flex-grow: 3;
+    }
+    .item-l-4{
+        width: calc(100% / 8);
+        flex-grow: 4;
+    }
+    .item-l-5{
+        width: calc(100% / 7);
+        flex-grow: 5;
+    }
+    .item-l-6{
+        width: calc(100% / 6);
+        flex-grow: 6;
+    }
+    .item-l-7{
+        width: calc(100% / 5);
+        flex-grow: 7;
+    }
+    .item-l-8{
+        width: calc(100% / 4);
+        flex-grow: 8;
+    }
+    .item-l-9{
+        width: calc(100% / 3);
+        flex-grow: 9;
+    }
+    .item-l-10{
+        width: calc(100% / 2);
+        flex-grow: 10;
+    }
+    .item-l-11{
+        width: calc(100% / 1);
+        flex-grow: 11;
+    }
+    .item-l-12{
+        width: 100%;
+        flex-grow: 12;
+    }
+    .thmBackg{
+        margin-top: calc(100% / 8);
+    }
+    .top{
+        padding-top: calc(100% / 7);
+    }
+}
+
+body{
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.search {
+    width: 100%;
+    position: relative
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid #FFEB3B;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #000000;
+}
+
+.searchButton {
+    position: absolute;  
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #FFEB3B;
+    background: #FFEB3B;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Style the navbar */
+  
+  /* Navbar links */
+  #navbar div {
+    text-align: center;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 2% 5%;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  } 
+
+  .container-flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row wrap;
+    flex-direction: row;
+  }
+
+  .top{
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      background: rgb(6, 22, 112);
+  }
+  .navHeader{
+      font-family: Arial, Helvetica, sans-serif;
+      float: right;
+      width: 100%;
+      color:white;
+  }

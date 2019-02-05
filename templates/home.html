@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ css }}">
+    <script type="text/javascript">
+        fetch("http://127.0.0.1:5000/ujicoba").then(response => { 
+            console.log(response); 
+            return response.json();
+        }).then(hasil => {
+            console.log(hasil);
+            document.getElementById("tambahan").innerHTML = hasil;
+        });
+    </script>
+</head>
+<body>
+    <div id="tambahan"></div>
+    {{ ht }}
+    {% for post in posts%}
+        <h2>{{post.title}}</h2>
+        <p>By {{post.author}} on {{post.date_posted}}</p>
+        <p>{{post.content}}</p>
+    {% endfor %}
+</body>
+</html>

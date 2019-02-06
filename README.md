@@ -21,12 +21,38 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 5. Enjoy
 
 ### Usage 
-```python
-from database import myDB
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
+
 # Train / Pre-Trained
-sdasda
+
+```python
+an = Analiser(training_data='data/coba_train.csv')
+
+# train model baru
+filename='model'
+an.train(filename)
+
+kata1 = input("Pos > " )
+ap = an.testFromTrained([an.tfidf_data.transform(kata1)])
+print(ap)
+
+#re-train
+filename = 'model'
+an.retrain(filename)
+
+kata1 = input("Pos > " )
+
+print (kata1)
+print (an.testFromTrained([an.tfidf_data.transform(kata1)]))
+
+#load model
+filename = 'model'
+an.load_model(filename)
+
+kata1 = input("Pos > " )
+
+print (kata1)
+print (an.testFromTrained([an.tfidf_data.transform(kata1)]))
+```
+
 # API
 sdasda

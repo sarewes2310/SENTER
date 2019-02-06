@@ -1,4 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/Sarewes2310/SENTET/master/static/asset/Logo/SENTET_2.png?token=AVp8RroIPfI2JxAkhoiin7WnAQvqSRycks5cZA6qwA%3D%3D)
+<br><br>
 SENTET adalah sebuah RESTful API yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. Tweet akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral dengan ekstraksi fitur TF-IDF 
 # Getting Started
 

@@ -3,11 +3,14 @@
 SENTET adalah sebuah RESTful API yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. Tweet akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral dengan ekstraksi fitur TF-IDF 
 # Getting Started
 
-### Installation
+### Prerequisites
 Dalam menggunakan RESTful API SENTET memerlukan beberapa library tambahan:
 ```
 twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, networkx, plotly, pymyql
 ```
+
+### Instalation
+
 ### Usage 
 ```python
 from database import myDB

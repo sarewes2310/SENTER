@@ -32,8 +32,9 @@ filename='model'
 an.train(filename)
 
 kata1 = input("Pos > " )
-ap = an.testFromTrained([an.tfidf_data.transform(kata1)])
-print(ap)
+print(an.testFromTrained([an.tfidf_data.transform(kata1)])) # float
+print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
+
 
 #re-train
 filename = 'model'
@@ -42,7 +43,8 @@ an.retrain(filename)
 kata1 = input("Pos > " )
 
 print (kata1)
-print (an.testFromTrained([an.tfidf_data.transform(kata1)]))
+print (an.testFromTrained([an.tfidf_data.transform(kata1)])) #float
+print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
 
 #load model
 filename = 'model'
@@ -51,7 +53,9 @@ an.load_model(filename)
 kata1 = input("Pos > " )
 
 print (kata1)
-print (an.testFromTrained([an.tfidf_data.transform(kata1)]))
+print (an.testFromTrained([an.tfidf_data.transform(kata1)])) #float
+print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
+
 ```
 
 # API

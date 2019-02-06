@@ -2,7 +2,7 @@
 <br><br>
 SENTET adalah sebuah RESTful API yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. Tweet akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral dengan ekstraksi fitur TF-IDF 
 # Getting Started
-Pertama - tama diwajibkan memiliki api twitter https://apps.twitter.com dan registrasi aplikasinya.
+Buat terlebih dahulu api pada halaman developer twitter https://apps.twitter.com. Registrasi aplikasi yang anda buat.
 Setelah berhasil simpan ```Consumer Key```, ```Consumer Secret```, ```Api Key ```, dan ```Api Secret Key``` yang didapat tab Apps.
 Kemudian isikan di file TwitterConfig.py
 

@@ -1,10 +1,12 @@
 from flask import Flask,render_template,url_for,Markup
-import sqlalchemy
+#import sqlalchemy
 import json
 import pandas as pd
 import networkx as nx
 import matplotlib.cm as cmm
 import matplotlib.pyplot as plt
+#from Lib.SENTET import NLP
+from flask import request
 
 app = Flask(__name__)
 
@@ -24,6 +26,7 @@ list_js = [
     #'<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>'
     #'<script src="component/asset/head.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>',
     '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>',
+    '<script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>'
     #'<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>'
 ]
 
@@ -49,12 +52,13 @@ posts = [
 def home():
     #dump(render_template("home.html"))
     #print(url_for('static', filename='ujicoba.css'))
-    return render_template("home.html",posts = posts,css=url_for('static', filename='ujicoba.css'))
+    return render_template("component/body/home.html",list_css = list_css,list_js = list_js)
 
 
 @app.route("/search",methods=['GET','POST'])
 def index():
-    return render_template("component/body/home.html",list_css = list_css,list_js = list_js)
+    print(request)
+    #return json.dumps(request)
 
 
 @app.route("/about")
@@ -125,7 +129,7 @@ def ujiTampilanJson():
     a = {
         "nodes":hasil,
         "links":link,
-        "length":[len(hasil)]
+        "length":[len(hasil),len(link)]
     }
     """a = {
         "nodes":[
@@ -141,6 +145,32 @@ def ujiTampilanJson():
         ]
     }"""
     return json.dumps(a)
+
+@app.route("/ujiChart/json")
+def ujiChartJSON():
+    df = pd.read_csv('Lib/export/out.csv')
+    #print(df)
+    hasil = []
+    a = 0
+    b = 0
+    c = 0 
+    #print(df.loc[:,'SA'])
+    for i in df.loc[:,'SA']:
+        #print(i)
+        if i == "Positif":
+            a = a + 1
+        elif i == "Negatif":
+            b = b + 1
+        elif i == "Netral":
+            c += 1
+    hasil = {
+        "P" : a,
+        "N" : b,
+        "L" : c
+    }
+    print(hasil)
+    return json.dumps(hasil)
+    
 
 with app.test_request_context():
     print(url_for('show_post',username="John Cena"))

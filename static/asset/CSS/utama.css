@@ -271,6 +271,7 @@ body{
   /* Page content */
   .content {
     padding: 2% 5%;
+    display: none;
   }
   
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -280,6 +281,7 @@ body{
     width: 100%;
     left: 0;
     right: 0;
+    background: #333;
   }
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -350,10 +352,10 @@ body{
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+}
+
+/* Style the buttons inside the tab */
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -362,23 +364,48 @@ body{
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
     background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
     background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
+}
+
+/* Style the tab content */
+.tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+p{
+    text-align: center;
+}
+.wordcloud{
+    width: 100%;
+}
+
+/*node graph*/
+#coeg{
+    width: 100%;
+}
+  
+.link {
+    stroke: #aaa;
   }
   
+.node text {
+    stroke:#333;
+    cursos:pointer;
+}
+
+.node circle{
+    stroke:#fff;
+    stroke-width:3px;
+    fill:rgb(36, 0, 168);
+}

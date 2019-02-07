@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>
-<style>
-
-.link {
-  stroke: #aaa;
-}
-
-.node text {
-    stroke:#333;
-    cursos:pointer;
-}
-
-.node circle{
-    stroke:#fff;
-    stroke-width:3px;
-    fill:rgb(36, 0, 168);
-}
-
-</style>
-<body>
-    <div id="coeg"></div>
-<script>
-
-var width = 1440,
-    height = 920
+var width = (document.getElementById("coeg")).offsetWidth,
+    height = 500;
 
 var svg = d3.select("#coeg").append("svg")
     .attr("width", width)
@@ -72,5 +47,3 @@ d3.json("http://127.0.0.1:5000/ujiTampilan/json", function(json) {
     node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   });
 });
-
-</script>

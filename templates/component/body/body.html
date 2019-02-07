@@ -1,0 +1,33 @@
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')">Tweet</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Hashtag</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="container-flex">
+        <div class="item-s-12 item-m-6 item-l-6">
+            <canvas id="myChart"></canvas>
+            <p>Sentiment Analysis Twitter Pemilu Indonesia</p>
+        </div>
+        <div class="item-s-12 item-m-6 item-l-6">
+            
+        </div>
+    </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div class="container-flex">
+        <div class="item-s-12 item-m-6 item-l-6">
+            <img src="{{url_for('static',filename='asset/wordcloud/cameron_back.png')}}" class="wordcloud">
+        </div>
+    </div>
+    <div class="container-flex">
+        <div class="item-s-12 item-m-12 item-l-12">
+            <div id="coeg"></div>
+            <p><b>Network Hastag #2019GantiPresiden</b></p>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='asset/JS/network.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='asset/JS/piechart.js') }}" type="text/javascript"></script>

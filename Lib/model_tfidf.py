@@ -5,6 +5,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from cleantweet import CleanTweet
 import os
 
+"""
+Class TFID berfungsi sebagai pembobotan (pemberial value) pada kata
+berdasarkan rumus TF - IDF (Term Frequency - Index Document Fequency) 
+"""
+
 class TFIDF:
 	all_data = []
 	onlyX	 = []
@@ -19,11 +24,17 @@ class TFIDF:
 		self.tfidf_data = self.tfidf_vectorizer.fit_transform(corpus[0])
 		self.fitData(corpus[1])
 
+	"""
+	fungsi iniVectorizer berguns sebagai parameter
+	awal sebelum dataset olah, format data hampir sama 
+	dengan word2vec
+	"""
+
 	def initVectorizer(self):
 		tokenize = lambda sent: self.preprocessor.prep(sent)
 		return TfidfVectorizer(norm='l2',
 							   min_df=0,
-							   #stop_word= '/data/stopword.txt'
+							   #stop_words='data/stopword.txt', :: coba == fail
 							   max_features=300,
 							   use_idf=True, 
 							   smooth_idf=False, 

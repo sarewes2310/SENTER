@@ -7,11 +7,18 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import networkx as nx
 import numpy as np
-#from coba_main import ProsesStoreData, ProcessHashtags, ProcessSentiment, ProcessTimestamp
+
+"""
+Class Grap_Generate berfungsi untuk meng-export 
+data yang telah dicrawl sebelumnya menjadi :
+Grap Batang (Total hashtag)
+Grap PieChart (Sentiment Analysis)
+WordCloud
+dan Node
+"""
 
 class Grap_Generate:
         
-
     def PieChart(StoreData):
           
         pos_tweet = StoreData['SA'].value_counts()

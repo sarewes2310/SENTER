@@ -11,7 +11,10 @@ import math
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re, string
 
-
+"""
+Class Analiser Berfungsi sebagai class untuk 
+training data dan men-load model data
+"""
 class Analiser:
 	'''
 	variable data training input dan output
@@ -20,7 +23,7 @@ class Analiser:
 	ydata = []
 
 	'''
-	variable object attributes class
+	variable object attribut class
 	'''
 	tfidf_data = None
 	model_loaded = None
@@ -28,6 +31,14 @@ class Analiser:
 	def __init__(self, training_data='data/coba_train.csv'):
 		self.preproses(training_data)
 		return None
+
+	"""
+	Fungsi (preproses) berfungsi sebagai
+	proses awal untuk mentraining dataset dan re-train
+	dataset 
+	Dengan mengambil data label setelah ";" ("1/0")
+	dan data hasil Class TFIDF 
+	"""
 
 	def preproses(self, filepath):
 		f = open(filepath)
@@ -76,6 +87,16 @@ class Analiser:
 
 	'''
 	Train data 
+	Fungsi untuk mentrain dataset, menggunakan: 
+	-"loss = binnary_crossentrophy" = karena output data 0 sampai dengan 1
+	-"aktivasi tanh = karena memiliki rentan -1 - 1, sebab 
+	  data dari Class TFID terdapat nilai negatif
+	-"aktivasi sigmoid = karena menggunakan binary_crossentophy,
+	aktivasi sigmoid hanya digunakan pada layer terakhir sebagai output
+
+	Note:
+	Bila data berukuran cukup besar, ganti variabel "learning_rate"
+	yang berukuran lebih kecil
 	'''
 	def train(self, output_filename = 'model'):
 		X = self.tfidf_data.getOnlyX()
@@ -83,8 +104,6 @@ class Analiser:
 
 		model = Sequential()
 
-
-		
 		# - menggunakan 4 layer
 		# - 
 		# - -  layer 1	: persamaan untuk panjang dimensi fitur data (maks. 300)
@@ -117,6 +136,15 @@ class Analiser:
 		# saving model
 		self.save_model(model, output_filename)
 
+	"""
+	Fungsi untuk meng-retrain data dengan model yang sudah ada 
+	dengan data set yang baru
+
+	Note:
+	Bila data berukuran cukup besar, ganti variabel "learning_rate"
+	yang berukuran lebih kecil
+	"""
+	
 	def retrain(self, output_filename):
 		X = self.tfidf_data.getOnlyX()
 		Y = self.ydata
@@ -136,7 +164,10 @@ class Analiser:
 		# save model
 		self.save_model(model, output_filename)
 
-
+	"""
+	Ouput hasil penghitungan
+	berupa float
+	"""
 	def getBinaryResult(self, x):
 		return x[0][0]
 		#return np.float(x[0][0])
@@ -150,7 +181,9 @@ class Analiser:
 			return "Negatif"
 
 	'''
-	Test
+	Test 
+	1.  testFromTrained = mengambil data berupa float
+	2.  testStrFromTrained = mengambil data berupa string "Positif, Netral, Negatif"
 	'''
 	def testFromTrained(self, x):
 		if self.model_loaded == None:

@@ -3,6 +3,15 @@ import nltk
 import csv
 import numpy as np 
 
+""""
+Class clean tweet berfungsi sebagai
+normalisasi dataset yang akan di training,
+dengan cara regex, dan mengganti kata slang 
+di tweet berdasarkan KBBI (data/kbba.txt) dan rootword (data/rootword.txt)
+
+kedua file tersebut dapat di update secara manual
+"""
+
 class CleanTweet:
 	KATA_DASAR  = []
 	DATA_KBBI 	= []

@@ -1,5 +1,10 @@
 
 from twython import Twython
+
+"""
+Fungsi untuk setting twitter API
+"""
+
 #Twitter Configuration
 CONSUMER_KEY    = 'qXVo3PXRvaxRDinwEqluagyGB'
 CONSUMER_SECRET = '8vkWXs30seGMJeJ21tg5SXXY0Lry9kdYhvJEGS3mYXIE6LHHpp'
@@ -13,10 +18,4 @@ def login():
 
     key = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
     return key 
-    # Authentication and access using keys:
-    ##auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-    #auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
-
-    # Return API with authentication:
-    #api = tweepy.API(auth)
-    #return api
+    

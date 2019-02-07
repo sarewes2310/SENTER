@@ -1202,12 +1202,35 @@
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e1e",
-    "pickerWorkingDir": "/media/root/New Volume/Magang",
+    "pickerWorkingDir": "/root/SENTET",
     "openedPathsList": {
         "workspaces2": [
+            "file:///root/SENTET/Lib",
+            "file:///root/SENTET",
+            "file:///root/SENTET/Lib/.vscode",
             "file:///media/root/New%20Volume/Magang/Sentiment_TermWeight",
             "file:///media/root/New%20Volume/Magang/Sentimen/Jadi/Baru/Sentiment_TermWeight"
         ],
         "files2": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/root/SENTET/Lib",
+                "external": "file:///root/SENTET/Lib",
+                "path": "/root/SENTET/Lib",
+                "scheme": "file"
+            },
+            "backupPath": "/root/SENTET/Lib/~/.vscode-root/Backups/78d0c5a02d500e7b5df04055c224d341",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 59,
+                "width": 1280,
+                "height": 741
+            }
+        }
     }
 }

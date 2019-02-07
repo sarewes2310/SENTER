@@ -1,5 +1,7 @@
-from analiser import Analiser
+import sys
+sys.path.append('/SENTET/Lib/')
 from os import path
+from analiser import Analiser
 
 
 an = Analiser(training_data='data/coba_train.csv')

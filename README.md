@@ -21,7 +21,27 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 5. Enjoy
 
 ### Usage 
+```python
+FROM SENTET Import NLP 
 
+cari = '2019GantiPresiden'
+
+dataaccum = NLP.MineData(twitter, cari ,2) #load fungsi crawl data 
+
+#print(dataaccum)
+
+dp = NLP.ProsesStoreData(dataaccum) #memproses enumerate data menjadi DataFrame dan memisah menjadi tweet dan retweet
+#print(dp[0]) # data retweet
+#print(dp[1]) # data tweet
+
+#Proses Memasukan Data ke dalam Database sql
+
+from create_db import input_database as ID #load Class input_database
+
+ID.masuk_tweet(dp[1]) #tabel tweet | dari variable dp[1] 
+ID.masuk_retweet(dp[0]) #tabel retweet 
+ID.sambungan(dp[1]) #tabel_cari
+```
 # Train / Pre-Trained
 
 ```python

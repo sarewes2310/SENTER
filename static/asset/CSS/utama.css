@@ -142,6 +142,9 @@
     .top{
         padding-top: calc(100% / 6);
     }
+    ul {
+        font-size: 0.7em;
+    }
 }
 
 @media only screen and (min-width: 1280px){
@@ -213,6 +216,9 @@
     .top{
         padding-top: calc(100% / 7);
     }
+    ul {
+        font-size: 1em;
+    }
 }
 
 body{
@@ -274,7 +280,6 @@ body{
     width: 100%;
     left: 0;
     right: 0;
-    background-color: #333;
   }
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -304,3 +309,38 @@ body{
       width: 100%;
       color:white;
   }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+  
+  li {
+      float: right;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  li a:hover {
+      background-color: #111;
+  }
+  div .coba {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow:
+        0 0 60px 30px #fff,
+        0 0 100px 60px #f0f,
+        0 0 140px 90px #0ff;
+}

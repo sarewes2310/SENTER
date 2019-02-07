@@ -1,0 +1,10 @@
+twython
+pandas
+matplotlib
+numpy
+keras
+tensorflow
+scikit-learn
+nltk
+csv
+math

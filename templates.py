@@ -5,11 +5,32 @@ import pandas as pd
 import networkx as nx
 import matplotlib.cm as cmm
 import matplotlib.pyplot as plt
-#from Lib.SENTET import NLP
+from Lib.SENTET import NLP 
 from flask import request
+from pandas import Timestamp
+import numpy as np
+from datetime import date, datetime
+from Lib.TwitterConfig import *
+from Lib.create_db import input_database as ID
+from Lib.GrafGenerator import Grap_Generate as gg
 
+import pymysql
+pymysql.install_as_MySQLdb() 
+import MySQLdb
+
+pymysql.converters.encoders[Timestamp] = pymysql.converters.escape_datetime
+pymysql.converters.encoders[np.float64] = pymysql.converters.escape_float
+pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
+pymysql.converters.conversions = pymysql.converters.encoders.copy()
+pymysql.converters.conversions.update(pymysql.converters.decoders)
+
+con = MySQLdb.connect(user="root",passwd="",host="localhost",db="coba")
+cursor = con.cursor(pymysql.cursors.DictCursor)
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+app.config["CACHE_TYPE"] = "Null" 
 
+global cari
 #
 # LIST VARIABEL CSS
 #
@@ -47,6 +68,48 @@ posts = [
     }
 ]
 
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+
+    if isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    raise TypeError ("Type %s not serializable" % type(obj))
+
+def SENTET(cari):
+    twitter = login()
+    global NLP
+    NLP = NLP()
+
+    #cari = 'NurhadiAldo'
+
+    dataaccum = NLP.MineData(twitter, cari ,2)
+
+    #print(dataaccum)
+
+    dp = NLP.ProsesStoreData(dataaccum)
+    df = NLP.ProcessSentiment(dataaccum)
+    dfs = NLP.ProcessHashtags(dataaccum)
+    dft = NLP.ProcessTimestamp(dataaccum)
+
+    #print("===================================================================== \n")
+
+    #Proses Memasukan Data ke dalam Database sql
+    ID.masuk_tweet(dp[1]) #tabel tweet
+    ID.masuk_retweet(dp[0]) #tabel retweet
+    ID.sambungan(dp[1]) #tabel_cari
+    #Export Grap dari Class Grap_Generate
+    gg.Word(dp)
+
+    return(dp)
+
+def getDB(cari):
+    sql = " SELECT tweet.Username, tweet.tanggal, tweet.tweet, tweet.SA FROM tweet \
+            LEFT JOIN tabel_cari ON tabel_cari.idT = tweet.idT \
+            LEFT JOIN hashtag ON hashtag.idH = tabel_cari.idH \
+            WHERE hashtag.isi = %s;" #hashtag.isi = %s (nama hashtag)
+
+    cursor.execute(sql,cari)
+        
 @app.route("/", methods=['GET','POST'])
 @app.route("/home")
 def home():
@@ -57,9 +120,16 @@ def home():
 
 @app.route("/search",methods=['GET','POST'])
 def index():
-    print(request)
-    #return json.dumps(request)
-
+    
+    if request.method == 'POST':
+        cari = request.form['search']
+        dp = SENTET(cari)
+        dpa = dp[2]   
+        getDB(cari)
+        hitung_tweet = len(dpa)
+        #return redirect(url_for("component/body/hasil.html",list_css = list_css,list_js = list_js))
+        return render_template("component/body/hasil.html",list_css = list_css,list_js = list_js, hitung_tweet = hitung_tweet, cari = cari)
+    return cari
 
 @app.route("/about")
 def about():
@@ -75,6 +145,16 @@ def show_post(username):
 def show_subpath(user_path):
     return "Path %s" % user_path
 
+@app.route("/getApiAll")
+def getApi():
+    
+    hs = cursor.fetchall()
+    #print(hs)
+    return json.dumps(hs, default=json_serial)
+               
+
+def prosesApiDate():
+    pass
 
 @app.route("/ujicoba")
 def uji():
@@ -88,7 +168,7 @@ def ujiTampilan():
 
 @app.route("/ujiTampilan/json")
 def ujiTampilanJson():
-    df = pd.read_csv('Lib/export/out.csv')
+    df = pd.read_csv('Lib/export/total.csv')
     #print(df)
     hasil = []
     for i in df.loc[:,'Hashtags']:
@@ -148,7 +228,7 @@ def ujiTampilanJson():
 
 @app.route("/ujiChart/json")
 def ujiChartJSON():
-    df = pd.read_csv('Lib/export/out.csv')
+    df = pd.read_csv('Lib/export/total.csv')
     #print(df)
     hasil = []
     a = 0

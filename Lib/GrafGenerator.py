@@ -94,11 +94,11 @@ class Grap_Generate:
 
     def Word(StoreData):
 
-        dp = StoreData
+        dp = StoreData[2]
         text = " ".join(txt for txt in dp['Tweet'])
 
         stopwords = set(STOPWORDS)
-        custom = open('data/stopword.txt', 'r', encoding='utf-8').readlines()
+        custom = open('Lib/data/stopword.txt', 'r', encoding='utf-8').readlines()
         stopwords.update(custom)
 
         wordcloud = WordCloud(height=1080, stopwords=stopwords, width=1920, background_color="white").generate(text)
@@ -107,7 +107,9 @@ class Grap_Generate:
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         #plt.show()
-        wordcloud.to_file("export/test_graph_wordclloud.png")
+        #wordcloud.to_file("Lib/export/test_graph_wordclloud.png")
+        #tampil web 
+        wordcloud.to_file("static/asset/wordcloud/WordCloud.png")
         print("WordCloud telah diexport")
         plt.gcf().clear()
 

@@ -2,7 +2,7 @@ from __future__ import division
 import string
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer
-from cleantweet import CleanTweet
+from .cleantweet import CleanTweet
 import os
 
 """

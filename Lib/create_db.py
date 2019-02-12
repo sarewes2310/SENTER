@@ -8,7 +8,7 @@ from pandas import Timestamp
 from datetime import datetime 
 from collections import OrderedDict
 from nltk.tokenize import word_tokenize
-from fungsi_db import *
+from .fungsi_db import *
 import re
 
 import pymysql
@@ -70,9 +70,9 @@ class input_database :
                         if len(hast) > 0: # jika data > 0
                             #for e in sd.iloc[a,3]: #tweet
                             sqlhs = """
-                            SELECT `idT` FROM `tweet` WHERE `tweet` = %s;
+                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
                             """
-                            cursor.execute(sqlhs, sd.iloc[a,3]) #check idT 
+                            cursor.execute(sqlhs, sd.iloc[a,0]) #check idT 
                             hs = cursor.fetchall()
                             print("tweet sama = ", len(hs)) 
                             
@@ -167,19 +167,39 @@ class input_database :
                                         """ 
                                         cursor.execute(sqlhas, i)
                                         con.commit()
-                                            
-                                        sqlin = """
-                                        SELECT `idR` FROM `tweet` WHERE `idJsonR` = %s
-                                        """
-                                        cursor.execute(sqlin, sdr.iloc[a,0])
-                                        hstglrtb = cursor.fetchall()
-                                        #print(len(hstgl))
 
-                                        if len(hstglrtb) > 0: #bila ada
-                                            pass 
+                                        sqlhs = """
+                                        SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
+                                        """
+                                        cursor.execute(sqlhs, sdr.iloc[a,0]['id']) #check idT 
+                                        hsrtb = cursor.fetchall()
+                                        #print("tweet sama = ", len(hsrtb))
+                                        if len(hsrtb) > 0 :
+                                                
+                                            sqlin = """
+                                            SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s
+                                            """
+                                            cursor.execute(sqlin, sdr.iloc[a,1])
+                                            hstglrtb = cursor.fetchall()
+                                            #print(len(hstgl))
+
+                                            if len(hstglrtb) > 0: #bila ada
+                                                pass 
+                                            else :
+                                                input_retweet(sdr, a, hsrtb)
+                                                con.commit()
                                         else :
-                                            input_retweet(sdr, a, hsrtb)
+                                            input_rt_t(sdr, a)
+
+                                            sqlin = """
+                                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
+                                            """
+                                            cursor.execute(sqlhs, sdr.iloc[a,0]['id'])
+                                            hstglrtbin = cursor.fetchall()
+
+                                            input_retweet(sdr, a, hstglrtbin)
                                             con.commit()
+                                            
                                         #print(has) = ()
 
                                 else :
@@ -258,8 +278,8 @@ class input_database :
                                 sqlinb = """
                                 SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
                                 """
-                                print("========= BUG ======")
-                                print(sds.iloc[a,0])
+                                #print("========= BUG =========")
+                                #print(sds.iloc[a,0])
                                 cursor.execute(sqlinb, sds.iloc[a,0])
                                 print(cursor.fetchall())
                                 #######

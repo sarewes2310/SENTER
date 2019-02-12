@@ -1,4 +1,4 @@
-from analiser import Analiser
+from .analiser import Analiser
 from os import path
 
 an = Analiser(training_data='data/coba_train.csv')

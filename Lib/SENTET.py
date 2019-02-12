@@ -6,8 +6,12 @@ import numpy as np
 import re
 from os import path
 from sqlalchemy import create_engine
-from analiser import Analiser
-from TwitterConfig import *
+#from Lib.analiser import Analiser
+#from Lib.TwitterConfig import *
+from .analiser import Analiser
+from .TwitterConfig import *
+from .cleantweet import CleanTweet as CT #cuma import fungsi clean_tweet()
+
 
 """
 Main Program yang berfungsi mencrawl data twitter 
@@ -35,14 +39,14 @@ print (an.testFromTrained([an.tfidf_data.transform(kata1)])) #float
 print (an.testFromTrained([an.tfidf_data.transform(kata2)])) #Pos, Net, Neg
 """
 
-twitter = login() #load TwitterConfig 
+#twitter = login() #load TwitterConfig 
 
 #Memanggil Class Analiser untuk load data set
 
 class NLP:
     an = None
     def __init__(self):
-        NLP.an = Analiser(training_data='data/coba_train.csv')
+        NLP.an = Analiser(training_data='Lib/data/coba_train.csv')
         filename = 'model'
         NLP.an.load_model(filename)
     
@@ -121,23 +125,7 @@ class NLP:
     clean_tweet berfungsi normalisasi tweet sebelum masuk ke DataFrame
     """
 
-    def clean_tweet(self, tweet):   
-        
-        def hapus_katadouble(s):
-            pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
-            return  pattern.sub(r"\1\1", s)
-        
-        #tweet=tweet.lower()
-        tweet = re.sub(r'\\u\w\w\w\w', '', tweet)
-        tweet = re.sub(r'http\S+','',tweet)# hapus link
-        #tweet = re.sub(r'RT','',tweet)
-        tweet = re.sub('@[^\s]+','',tweet)# hapus username
-        tweet = re.sub(r'#([^\s]+)', r'\1', tweet)# hapus tagger
-        tweet=re.sub(r'\w*\d\w*', '',tweet).strip() #hapus angka & str(angka) 
-        tweet=hapus_katadouble(tweet) # lurus
-        
-        return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet).split())
-
+    
     """
     ProcessSentiment mengolah data sentimen berdasarkan crawl tweet,
     kemudian data sentiment tersebut digunakan pada 
@@ -160,9 +148,15 @@ class NLP:
     """
 
     def ProsesStoreData(self, data):
+
+        #Note (Penting:)
+        #jika terjadi : "TypeError: clean_tweet() missing 1 required positional argument: 'tweet'"
+        #atau NameError: name 'an' is not defined
+        #kemungkinan class belum diload, atau sudah diload
         
         
-        df1 = pd.DataFrame(columns=['IDrts', 'IDR', 'Username', 'Date', 'Retweet', 'Hashtags', 'RT', 'SA', 'Float'])
+        
+        df1 = pd.DataFrame(columns=['IDrts', 'ID', 'Username', 'Date', 'Tweet', 'Hashtags', 'RT', 'SA', 'Float'])
         df2 = pd.DataFrame(columns=['ID', 'Username', 'Date', 'Tweet', 'Hashtags', 'RT', 'SA', 'Float'])
 
         #NLP.an = Analiser(training_data='data/coba_train.csv')
@@ -176,20 +170,20 @@ class NLP:
                     a = ' '
                 else:
                     a = a + str(hashtag['text'] + ' ')
+                    a = a.lower()
             if 'retweeted_status' in twit:
             
                 df1 = df1.append(pd.DataFrame({
                     'IDrts':[(twit['retweeted_status'])],
-                    'IDR':[(twit['id'])],
+                    'ID':[(twit['id'])],
                     'Username':[twit['user']['screen_name']],
                     'Date':[pd.to_datetime(twit['created_at'])],
-                    'Retweet':[NLP.clean_tweet(twit['full_text'])],
+                    'Tweet':[CT.clean_tweet(twit['full_text'])],
                     'Hashtags':[a],
                     'RT':[twit['retweet_count']],
                     'SA':[NLP.an.testStrFromTrained([NLP.an.tfidf_data.transform(twit['full_text'])])],
                     'Float':[float(NLP.an.testFromTrained([NLP.an.tfidf_data.transform(twit['full_text'])]))]
                 }))
-                print(df1)
                     
                 #b = clean_tweet(twit['full_text'])
             else:
@@ -198,29 +192,30 @@ class NLP:
                     'ID':[(twit['id'])],
                     'Username':[twit['user']['screen_name']],
                     'Date':[pd.to_datetime(twit['created_at'])],
-                    'Tweet':[NLP.clean_tweet(twit['full_text'])],
+                    'Tweet':[CT.clean_tweet(twit['full_text'])],
                     'Hashtags':[a],
                     'RT':[twit['retweet_count']],
                     'SA':[NLP.an.testStrFromTrained([NLP.an.tfidf_data.transform(twit['full_text'])])],
                     'Float':[float(NLP.an.testFromTrained([NLP.an.tfidf_data.transform(twit['full_text'])]))]
                 }))
-                print(df2)
 
-        
-        df1.to_csv('export/RT.csv')
-        df2.to_csv('export/T.csv')
-        print(df1)
-        StoreData = [df1, df2]
+        #DataJoin = df1[['ID','Username', 'Date', 'Tweet', 'Hashtags', 'RT', 'SA', 'Float']].concat(df2[['ID','Username', 'Date', 'Tweet', 'Hashtags', 'RT', 'SA', 'Float'], on = 'ID')
+        #DataJoin = pd.merge(df1, df2, how='inner', left_on = 'ID', right_on = 'ID') 
+        DataJoin = pd.concat([df1, df2], sort=False)
+        StoreData = [df1, df2, DataJoin]
+        df1.to_csv('Lib/export/RT.csv')
+        df2.to_csv('Lib/export/T.csv')
+        DataJoin.to_csv('Lib/export/total.csv')
         print(StoreData)
+        print(DataJoin)
         print("Proses Crawl Data Selesai! \n")
         return StoreData
-
 """
 ########
-Contoh Pengunaan
+#Contoh Pengunaan
 ########
 
-cari = '2019GantiPresiden'
+cari = 'NurhadiAldo'
 
 NLP = NLP()
 dataaccum = NLP.MineData(twitter, cari ,2)
@@ -244,11 +239,11 @@ ID.sambungan(dp[1]) #tabel_cari
 
 #Export Grap dari Class Grap_Generate
 
-from GrafGenerator import Grap_Generate
+#from GrafGenerator import Grap_Generate
 
-gg = Grap_Generate
-gg.PieChart(dp)
-gg.Graf(df, dfs, dft)
-gg.Word(dp)
-gg.Node(dp)
+#gg = Grap_Generate
+#gg.PieChart(dp)
+#gg.Graf(df, dfs, dft)
+#gg.Word(dp)
+#gg.Node(dp)
 """

@@ -4,7 +4,7 @@ from keras.optimizers import SGD
 import numpy as np 
 from keras.models import model_from_json
 from random import shuffle
-from model_tfidf import TFIDF
+from .model_tfidf import TFIDF
 import nltk
 import csv
 import math
@@ -28,7 +28,7 @@ class Analiser:
 	tfidf_data = None
 	model_loaded = None
 
-	def __init__(self, training_data='data/coba_train.csv'):
+	def __init__(self, training_data='Lib/data/coba_train.csv'):
 		self.preproses(training_data)
 		return None
 
@@ -60,11 +60,11 @@ class Analiser:
 
 		# - save model
 		model_json = model.to_json()
-		with open("model/" + filename + ".json", "w") as json_file:
+		with open("Lib/model/" + filename + ".json", "w") as json_file:
 		    json_file.write(model_json)
 
 		# - save weight
-		model.save_weights("model/" + filename + ".weight")
+		model.save_weights("Lib/model/" + filename + ".weight")
 		print("Model Disimpan")
 		# END SAVING MODEL
 
@@ -72,13 +72,13 @@ class Analiser:
 		model = Sequential()
 
 		# START LOADING MODEL
-		json_file = open("model/" + filename + ".json", 'r')
+		json_file = open("Lib/model/" + filename + ".json", 'r')
 		loaded_model_json = json_file.read()
 		json_file.close()
 		model = model_from_json(loaded_model_json)
 		
 		# - load weights
-		model.load_weights("model/" + filename + ".weight")
+		model.load_weights("Lib/model/" + filename + ".weight")
 		print("Load Model")
 		# END LOADING MODEL
 

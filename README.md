@@ -22,10 +22,9 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 6. Enjoy
 
 ### Usage 
-```python
+
 1. langsung run file ```template.py```
 2. buka browser url : ```127.0.0.1:5000```
-```
 
 # API
 1. JSON graf network ```127.0.0.1:5000/ujiTampilan/json ```

@@ -18,65 +18,14 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 2. Isikan ```Consumer Key```, ```Consumer Secret```, ```Api Key ```, dan ```Api Secret Key``` pada TwitterConfig.py
 3. Buat Database SQL, file database terdapat pada folder ```DB/sentiment_analysis_twitter-2.sql``` 
 4. Buat Model dengan cara run python file di folder ```test/test_main_training.py```
-5. Enjoy
+5. Pastikan ada flask
+6. Enjoy
 
 ### Usage 
-```python
-FROM SENTET Import NLP 
 
-cari = '2019GantiPresiden'
-
-dataaccum = NLP.MineData(twitter, cari ,2) #load fungsi crawl data 
-
-#print(dataaccum)
-
-dp = NLP.ProsesStoreData(dataaccum) #memproses enumerate data menjadi DataFrame dan memisah menjadi tweet dan retweet
-#print(dp[0]) # data retweet
-#print(dp[1]) # data tweet
-
-#Proses Memasukan Data ke dalam Database sql
-
-from create_db import input_database as ID #load Class input_database
-
-ID.masuk_tweet(dp[1]) #tabel tweet | dari variable dp[1] 
-ID.masuk_retweet(dp[0]) #tabel retweet 
-ID.sambungan(dp[1]) #tabel_cari
-```
-# Train / Pre-Trained
-
-```python
-an = Analiser(training_data='data/coba_train.csv')
-
-# train model baru
-filename='model'
-an.train(filename)
-
-kata1 = input("Pos > " )
-print(an.testFromTrained([an.tfidf_data.transform(kata1)])) # float
-print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
-
-
-#re-train
-filename = 'model'
-an.retrain(filename)
-
-kata1 = input("Pos > " )
-
-print (kata1)
-print (an.testFromTrained([an.tfidf_data.transform(kata1)])) #float
-print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
-
-#load model
-filename = 'model'
-an.load_model(filename)
-
-kata1 = input("Pos > " )
-
-print (kata1)
-print (an.testFromTrained([an.tfidf_data.transform(kata1)])) #float
-print (an.testStrFromTrained([NLP.an.tfidf_data.transform(kata1)])) #'Pos'/'Net'/'Neg'
-
-```
+1. langsung run file ```template.py```
+2. buka browser url : ```127.0.0.1:5000```
 
 # API
-sdasda
+1. JSON graf network ```127.0.0.1:5000/ujiTampilan/json ```
+2. Get All Data berdasarkan pencaharian ```127.0.0.1:5000/getApiAll```

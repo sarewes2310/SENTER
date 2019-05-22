@@ -274,4 +274,3 @@ G1.clear()
 dp.sort_value(["RT"], ascending=False)
 dp_rt = dp.drop(dp[dp.RT <= 10].index)
 dp_rt.sort_value(["RT"], ascending=False).head(10)
-

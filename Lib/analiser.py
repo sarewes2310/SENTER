@@ -42,17 +42,13 @@ class Analiser:
 
 	def preproses(self, filepath):
 		f = open(filepath)
-
 		sents = f.read().split('\n')
-
 		shuffle(sents)
-
 		for sent in sents:
 			temp = sent.split(';')
 			if len(temp) == 2:
 				self.xdata.append(temp[0])
 				self.ydata.append([int(temp[1])])
-
 		self.tfidf_data = TFIDF([self.xdata, self.ydata])
 
 	def save_model(self, model, filename='model'):
@@ -201,5 +197,3 @@ class Analiser:
 		
 		# model.compile(loss='binary_crossentropy', optimizer=sgd)
 		return self.getStrResult(self.model_loaded.predict_proba(np.array(x)))
-
-

@@ -23,20 +23,17 @@ class CleanTweet:
 		DATA_KBBI	= [kamus.strip('\n').strip('\r') for kamus in open('Lib/data/kbba.txt')]
 
 	def tokenize(self, tweet): 
-		
 		# token = nltk.word_tokenize(tweet)
 		token = tweet.split(' ')
 		return token
 
 	def kbbi(self, token): 
 		global DATA_KBBI
-
 		#ubah list menjadi dictionary 
 		dic={}
 		for i in DATA_KBBI: 
 			(key,val)=i.split('\t')
 			dic[str(key)]=val
-
 		#kbbi cocokan 
 		final_string = ' '.join(str(dic.get(word, word)) for word in token).split()
 		return final_string

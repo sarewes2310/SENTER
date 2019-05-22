@@ -5,11 +5,13 @@ import pandas as pd
 import networkx as nx
 import matplotlib.cm as cmm
 import matplotlib.pyplot as plt
-from Lib.SENTET import NLP 
 from flask import request
 from pandas import Timestamp
 import numpy as np
 from datetime import date, datetime
+
+""" Library SENTET """
+from Lib.SENTET import NLP 
 from Lib.TwitterConfig import *
 from Lib.create_db import input_database as ID
 from Lib.GrafGenerator import Grap_Generate as gg
@@ -24,7 +26,7 @@ pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
 pymysql.converters.conversions = pymysql.converters.encoders.copy()
 pymysql.converters.conversions.update(pymysql.converters.decoders)
 
-con = MySQLdb.connect(user="root",passwd="",host="localhost",db="coba")
+con = MySQLdb.connect(user="root",passwd="",host="127.0.0.1",db="sentiment_analysis_twitter")
 cursor = con.cursor(pymysql.cursors.DictCursor)
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -49,23 +51,6 @@ list_js = [
     '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>',
     '<script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>'
     #'<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>'
-]
-
-posts = [
-    {
-        'author'      : 'Corey Schafer',
-        'title'       : 'Blog Post 1',
-        'content'     : 'First post content',
-        'date_posted' : 'April 20, 2019',
-        #'css'         : url_for('static', filename='ujicoba.css')
-    },
-    {
-        'author'      : 'Jane Doe',
-        'title'       : 'Blog Post 2',
-        'content'     : 'Second post content',
-        'date_posted' : 'April 21, 2019',
-        #'css'         : url_for('static', filename='ujicoba.css')
-    }
 ]
 
 def json_serial(obj):

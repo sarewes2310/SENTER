@@ -1,13 +1,15 @@
 from twython import Twython
 import time
 import collections
-import pandas as pd
-import numpy as np
+#import pandas as pd
+#import numpy as np
 import re
 from os import path
 from sqlalchemy import create_engine
 #from Lib.analiser import Analiser
 #from Lib.TwitterConfig import *
+
+""" Library SENTET """
 from .analiser import Analiser
 from .TwitterConfig import *
 from .cleantweet import CleanTweet as CT #cuma import fungsi clean_tweet()
@@ -53,9 +55,7 @@ class NLP:
     """
     Mencrawl twitter Data
     """
-
     def MineData(self, apiobj, query, pagestocollect = 10):
-
         results = apiobj.search(q=query, include_entities='true',
                                 tweet_mode='extended',count='450',
                                 result_type='recent',
@@ -64,18 +64,13 @@ class NLP:
         data = results['statuses']
         i=0
         ratelimit=1
-        
         while results['statuses'] and i<pagestocollect: 
-            
             if ratelimit < 1: 
                 print(str(ratelimit)+'Rate limit!')
                 break
-            
             mid = results['statuses'][len(results['statuses']) -1]['id']-1
-
             print(mid)
             print('Jumlah Tweet Per-page : '+str(len(results['statuses'])))
-            
             results = apiobj.search(q=query, max_id=str(mid)
                                 ,include_entities='true',
                                 tweet_mode='extended',count='450',
@@ -93,7 +88,6 @@ class NLP:
     ProcessHashtags berfungsi mengambil hanya 
     hashtag
     """
-
     def ProcessHashtags(self, data):
         HashtagData = pd.DataFrame(columns=['HT','ID','Date','RAWDATA_INDEX'])
         
@@ -106,6 +100,7 @@ class NLP:
                                 , ignore_index=True)
 
         return HashtagData
+    
     """
     ProcessTimestamp berfungsi mengambil data timestamp 
     untuk data pada Class Grap_Generate
@@ -120,18 +115,12 @@ class NLP:
                                 , ignore_index=True)
 
         return TimestampData
-
-    """
-    clean_tweet berfungsi normalisasi tweet sebelum masuk ke DataFrame
-    """
-
     
     """
     ProcessSentiment mengolah data sentimen berdasarkan crawl tweet,
     kemudian data sentiment tersebut digunakan pada 
     Class Graph_Generate  
     """
-
     def ProcessSentiment(self, data):
         SentimentData = pd.DataFrame(columns=['ID','Date','Polarity'], dtype = float)
         
@@ -142,11 +131,11 @@ class NLP:
                                 , ignore_index=True)
 
         return SentimentData
+    
     """
     ProsesStoreData berfungsi sebagai mengubah data crawl menjadi DataFrame,
     dan membagi 2 besar data menjadi Data tweet, dan data Retweet
     """
-
     def ProsesStoreData(self, data):
 
         #Note (Penting:)
@@ -210,6 +199,8 @@ class NLP:
         print(DataJoin)
         print("Proses Crawl Data Selesai! \n")
         return StoreData
+
+
 """
 ########
 #Contoh Pengunaan

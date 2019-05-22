@@ -1,21 +1,17 @@
-
 from twython import Twython
 
 """
 Fungsi untuk setting twitter API
 """
-
 #Twitter Configuration
-CONSUMER_KEY    = 'qXVo3PXRvaxRDinwEqluagyGB'
-CONSUMER_SECRET = '8vkWXs30seGMJeJ21tg5SXXY0Lry9kdYhvJEGS3mYXIE6LHHpp'
+CONSUMER_KEY    = 'YOUR-CONSUMER-KEY'
+CONSUMER_SECRET = 'YOUR-CONSUMER_SECRET-KEY'
 
 # Access Configuration:
-ACCESS_TOKEN  = '1707115609-D1axGwQkv2Mn2NOXd1sHqZbnQx0DqIJoHANI26V'
-ACCESS_SECRET = 'liUdv7bkjUAWB347pl4oPfjhwlsHdzlAOn9fee6MoFhGL'
-
+ACCESS_TOKEN  = 'YOUR-ACCESS_TOKEN'
+ACCESS_SECRET = 'YOUR-ACCESS_SECRET'
 
 def login():
-
     key = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
     return key 
     

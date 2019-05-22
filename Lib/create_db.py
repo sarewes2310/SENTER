@@ -21,7 +21,7 @@ pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
 pymysql.converters.conversions = pymysql.converters.encoders.copy()
 pymysql.converters.conversions.update(pymysql.converters.decoders)
 
-con = MySQLdb.connect(user="root",passwd="",host="localhost",db="coba")
+con = MySQLdb.connect(user="root",passwd="",host="localhost",db="cobasentimentanalysis")
 cursor = con.cursor(pymysql.cursors.DictCursor)
 
 """
@@ -35,13 +35,9 @@ Proses peng-inputan ke database melalui beberapa iterasi 'SELECT',
 untuk mencegah redudansi data.
 
 """
-
 class input_database :
-        
     def masuk_tweet(StoreData):
-
-        sd = StoreData
-        
+        sd = StoreData  
         for a in range(0,len(sd)-1):
             sqlt = """
             SELECT `idT` FROM `tweet` WHERE `tweet` = %s
@@ -53,10 +49,8 @@ class input_database :
                 pass
             else:
                 input_tweet(sd, a)
-
             x = sd.iloc[a,4].split(" ") #displit
             if len(x) > 2: #dicheck apabila jumlah isi > 2
-                
                 for i in x:
                     if i is not '': #dicheck sisa pembagian dari split  
                         sqlh = """
@@ -64,9 +58,7 @@ class input_database :
                         """            
                         cursor.execute(sqlh, i)
                         hast = cursor.fetchall()
-                        
                         print("hast sama = ", len(hast))
-                        
                         if len(hast) > 0: # jika data > 0
                             #for e in sd.iloc[a,3]: #tweet
                             sqlhs = """
@@ -75,9 +67,7 @@ class input_database :
                             cursor.execute(sqlhs, sd.iloc[a,0]) #check idT 
                             hs = cursor.fetchall()
                             print("tweet sama = ", len(hs)) 
-                            
-                        else :
-                                        
+                        else :     
                             sqlhas = """
                             INSERT INTO `hashtag` (`isi`) VALUES (%s)
                             """ 
@@ -97,13 +87,11 @@ class input_database :
                             else :
                                 input_tweet(sd, a)
                             #print(has) = ()
-
             else :
                 pass
     ##### PASS
 
     def masuk_retweet(StoreData):
-
         sdr = StoreData
         #print(sdr)
         for a in range(0,len(sdr)-1):
@@ -117,15 +105,12 @@ class input_database :
             if len(hasilt) > 0:    
                 pass
             else: 
-            
-            #    input_retweet(sdr, a, hasilt) 
-            
+                #input_retweet(sdr, a, hasilt) 
                 sqlcari = """
                 SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s; 
                 """ 
                 cursor.execute(sqlcari, sdr.iloc[a,0]['id_str'])
                 hascari = cursor.fetchall()
-
                 if len(hascari) > 0:
                     sqltc = """
                     SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
@@ -137,10 +122,8 @@ class input_database :
                         pass 
                     else:
                         ##TO DO : - Check Hashtag;
-
                         x = sdr.iloc[a,5].split(" ") #displit
                         if len(x) > 2: #dicheck apabila jumlah isi > 2
-                            
                             for i in x:
                                 if i is not '': #dicheck sisa pembagian dari split  
                                     sqlh = """
@@ -148,41 +131,33 @@ class input_database :
                                     """            
                                     cursor.execute(sqlh, i)
                                     hast = cursor.fetchall()
-                                    
                                     print("hast sama = ", len(hast))
-                                    
                                     if len(hast) > 0: # jika data > 0
-                                        
                                         sqlhs = """
                                         SELECT `idT` FROM `tweet` WHERE `tweet` = %s;
                                         """
                                         cursor.execute(sqlhs, sdr.iloc[a,0]['id']) #check idT 
                                         hsrtb = cursor.fetchall()
                                         #print("tweet sama = ", len(hsrtb)) 
-                                        
                                     else :
-                                                    
                                         sqlhas = """
                                         INSERT INTO `hashtag` (`isi`) VALUES (%s)
                                         """ 
                                         cursor.execute(sqlhas, i)
                                         con.commit()
-
                                         sqlhs = """
                                         SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
                                         """
                                         cursor.execute(sqlhs, sdr.iloc[a,0]['id']) #check idT 
                                         hsrtb = cursor.fetchall()
                                         #print("tweet sama = ", len(hsrtb))
-                                        if len(hsrtb) > 0 :
-                                                
+                                        if len(hsrtb) > 0 :      
                                             sqlin = """
                                             SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s
                                             """
                                             cursor.execute(sqlin, sdr.iloc[a,1])
                                             hstglrtb = cursor.fetchall()
                                             #print(len(hstgl))
-
                                             if len(hstglrtb) > 0: #bila ada
                                                 pass 
                                             else :
@@ -190,27 +165,20 @@ class input_database :
                                                 con.commit()
                                         else :
                                             input_rt_t(sdr, a)
-
                                             sqlin = """
                                             SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
                                             """
                                             cursor.execute(sqlhs, sdr.iloc[a,0]['id'])
                                             hstglrtbin = cursor.fetchall()
-
                                             input_retweet(sdr, a, hstglrtbin)
                                             con.commit()
-                                            
                                         #print(has) = ()
-
                                 else :
                                     pass
                         #input_retweet(sdr, a, hascari)
-
                 else:
-                    
                     input_rt_t(sdr,a)
                     con.commit()
-            
                     sqlint = """
                     SELECT `idT` FROM `tweet` WHERE `idJsonT` = '%s'
                     """
@@ -218,7 +186,6 @@ class input_database :
                     cursor.execute(sqlint, sdr.iloc[a, 0]['id'])
                     hasint = cursor.fetchall()
                     #print("ini retweet ke 2 : ",sdr.iloc[a,0]['id_str']," == ", hasint )
-                    
                     print(hasint)
                     sqltck = """
                     SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
@@ -235,18 +202,13 @@ class input_database :
                         pass 
                     else:
                         input_retweet(sdr, a, hasint)
-                
-            
+
     ##### PASS
-                            
     def sambungan(StoreData):
         sds = StoreData
-        
         for a in range(0,len(sds)-1):
-            
             x = sds.iloc[a,4].split(" ") #displit
             if len(x) > 2: #dicheck apabila jumlah isi > 2
-                
                 for i in x:
                     if i is not '': #dicheck sisa pembagian dari split  
                         sqlh = """
@@ -254,19 +216,15 @@ class input_database :
                         """            
                         cursor.execute(sqlh, i)
                         hast = cursor.fetchall()
-                        
                         print("hast sama = ", hast)
                         #print(x)
-                        
                         if len(hast) > 0: # jika data > 0
-                            
                             sqlhs = """
                             SELECT `idT` FROM `tweet` WHERE `idJsonT`  = %s;
                             """
                             cursor.execute(sqlhs, sds.iloc[a,0]) #check idT 
                             hs = cursor.fetchall()
                             print("tweet sama = ", len(hs)) 
-
                             if len(hs) > 0:
                                 input_sambungan(hs, hast) #(IDtweet, IDhashtag)
                                 #cursor.fetchall()
@@ -274,7 +232,6 @@ class input_database :
                             else :
                                 input_tweet(sds, a)
                                 con.commit()
-
                                 sqlinb = """
                                 SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
                                 """
@@ -291,45 +248,36 @@ class input_database :
                                 hsb = cursor.fetchall()
                                 print(hsb)
                                 input_sambungan(hsb, hast)
-                                
-                
                         else :
-                                        
                             sqlhas = """
                             INSERT INTO `hashtag` (`isi`) VALUES (%s)
                             """ 
                             cursor.execute(sqlhas, i)
-                            con.commit()
-                                
+                            con.commit()  
                             sqlin = """
                             SELECT `idH` FROM `hashtag` WHERE `isi` = %s
                             """
                             cursor.execute(sqlin, i)
                             hastg = cursor.fetchall()
                             #print(len(hstgl))
-                            
                             sqlst = """
                             SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
                             """
-
                             cursor.execute(sqlst, sds.iloc[a,0])
                             hasst = cursor.fetchall()
-
                             if len(hasst) > 0:
                                 input_sambungan(hasst, hastg)
                             else:
                                 input_tweet(sds, a)
-
                                 sqlsl = """
                                 SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
                                 """
                                 cursor.execute(sqlst, sds.iloc[a,0])
                                 hasstb = cursor.fetchall()
-
                                 input_sambungan(hasstb, hastg)
-                        
             else :
                 pass
+                
     ##### PASS
     def cari_tanggal():
         sqltang = "SELECT * FROM `tweet` WHERE `tanggal` >= %s"

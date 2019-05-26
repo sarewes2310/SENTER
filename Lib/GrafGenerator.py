@@ -93,16 +93,12 @@ class Grap_Generate:
         plt.gcf().clear()
 
     def Word(StoreData):
-
         dp = StoreData[2]
         text = " ".join(txt for txt in dp['Tweet'])
-
         stopwords = set(STOPWORDS)
         custom = open('Lib/data/stopword.txt', 'r', encoding='utf-8').readlines()
         stopwords.update(custom)
-
         wordcloud = WordCloud(height=1080, stopwords=stopwords, width=1920, background_color="white").generate(text)
-
         plt.figure(figsize=(24, 12))
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")

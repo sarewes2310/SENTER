@@ -4,12 +4,14 @@ from keras.optimizers import SGD
 import numpy as np 
 from keras.models import model_from_json
 from random import shuffle
-from .model_tfidf import TFIDF
 import nltk
 import csv
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re, string
+
+""" Library SENTET """
+from .model_tfidf import TFIDF
 
 """
 Class Analiser Berfungsi sebagai class untuk 
@@ -50,6 +52,9 @@ class Analiser:
 				self.xdata.append(temp[0])
 				self.ydata.append([int(temp[1])])
 		self.tfidf_data = TFIDF([self.xdata, self.ydata])
+		print("PROCESS TFIDF")
+		print(self.tfidf_data)
+		#self.save_model(self.tfidf_data, filename = 'tfidf_v1')
 
 	def save_model(self, model, filename='model'):
 		self.model_loaded = model
@@ -69,12 +74,14 @@ class Analiser:
 
 		# START LOADING MODEL
 		json_file = open("Lib/model/" + filename + ".json", 'r')
+		#json_file = open("model/" + filename + ".json", 'r')
 		loaded_model_json = json_file.read()
 		json_file.close()
 		model = model_from_json(loaded_model_json)
 		
 		# - load weights
 		model.load_weights("Lib/model/" + filename + ".weight")
+		#model.load_weights("model/" + filename + ".weight")
 		print("Load Model")
 		# END LOADING MODEL
 

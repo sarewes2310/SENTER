@@ -1,206 +1,129 @@
 ,ID,Username,Date,Tweet,Hashtags,RT,SA,Float
-0,1131111603015901185,suaraRakyt,2019-05-22 08:16:35,Masyarakat Indonesia yg di Sydney Australia ini pun menginginkan Presiden Baru,2019gantipresiden ,0,Negatif,0.33743801712989807
-0,1131110661579264001,Kerja4As,2019-05-22 08:12:51,FPI Ada pihak ketiga yang ingin mengadu domba,,0,Negatif,0.27876609563827515
-0,1131110617610371072,Kerja4As,2019-05-22 08:12:40,Prabowo Sandi Ulama BPN dan Purnawirawan Kumpul di Kertanegara,,0,Negatif,0.08167920261621475
-0,1131110593790914561,Kerja4As,2019-05-22 08:12:35,FPI Benarkan Ada Laskarnya Gugur Ditembak,,0,Negatif,0.06085462123155594
-0,1131110549436153856,Kerja4As,2019-05-22 08:12:24,Saksi Mata Polisi tembak warga sipil di Tanah Abang,,0,Positif,0.8291372060775757
-0,1131110546605002753,Kerja4As,2019-05-22 08:12:23,Soal Aksi Kedaulatan Rakyat MUI DIY Minta Jokowi Mundur,,0,Negatif,0.30609673261642456
-0,1131110483455610880,PinondangSbrng,2019-05-22 08:12:08,Prabowo Sandi Ulama BPN dan Purnawirawan Kumpul di Kertanegara,,0,Negatif,0.08167920261621475
-0,1131110482155364357,PinondangSbrng,2019-05-22 08:12:08,FPI Benarkan Ada Laskarnya Gugur Ditembak,,0,Negatif,0.06085462123155594
-0,1131110480787984385,PinondangSbrng,2019-05-22 08:12:08,Saksi Mata Polisi tembak warga sipil di Tanah Abang,,0,Positif,0.8291372060775757
-0,1131110478359552000,PinondangSbrng,2019-05-22 08:12:07,Soal Aksi Kedaulatan Rakyat MUI DIY Minta Jokowi Mundur,,0,Negatif,0.30609673261642456
-0,1131108580860604416,RGP_2019,2019-05-22 08:04:35,Alumni LBH YLBHI Serukan Copot Kapolri dan Wiranto,,0,Negatif,0.11868283152580261
-0,1131108579451297792,RGP_2019,2019-05-22 08:04:34,Massa Aksi Mei Temukan Peluru Tajam di Dalam Mobil Polisi,,0,Positif,0.8005662560462952
-0,1131108576842457088,RGP_2019,2019-05-22 08:04:34,Cerita Korban Meninggal Saat Jaga Rumah Habib Rizieq,,0,Positif,0.8920021057128906
-0,1131108574019686400,RGP_2019,2019-05-22 08:04:33,Polisi Akui Tak Pakai Peluru Tajam,,0,Negatif,0.07997056096792221
-0,1131108572337758208,RGP_2019,2019-05-22 08:04:33,Putra Habib Salim Al Jufrie Ayah Tilawah Juz Dalam Hari,,0,Positif,0.9623029828071594
-0,1131108570831962112,RGP_2019,2019-05-22 08:04:32,Dengan Wajah Cerah AHY Ucapkan Selamat pada Jokowi,,0,Positif,0.749768853187561
-0,1131108569435332608,RGP_2019,2019-05-22 08:04:32,Memasuki Masjid Ini Harus Bayar,,0,Negatif,0.10331455618143082
-0,1131108564045565952,RGP_2019,2019-05-22 08:04:31,Massa Ricuh Bukan Peserta Demo di Bawaslu Kata Polisi,,0,Netral,0.6878442168235779
-0,1131108562669920257,RGP_2019,2019-05-22 08:04:30,Meletus Oknum Massa Teriaki Polisi Maling Hingga Serang Barikade,,0,Positif,0.8574230074882507
-0,1131108561168285697,RGP_2019,2019-05-22 08:04:30,Kronologi Penangkapan Takmir Masjid Al Ittihad Tebet,,0,Positif,0.7787084579467773
-0,1131108558383267841,RGP_2019,2019-05-22 08:04:29,Reaksi Aparat Saat Ditanya Mengapa Sudirman Said dan Dahnil Dilarang Ikut Aksi,,0,Positif,0.9283159375190735
-0,1131108557007532032,RGP_2019,2019-05-22 08:04:29,Massa Aksi Sholat Isya dan Tarawih Beralas Kain Berkiblat Duri,,0,Positif,0.9064890742301941
-0,1131108555627618304,RGP_2019,2019-05-22 08:04:29,Redakan Bentrok di Kalibaru Pasukan TNI Disambut Hangat Warga,,0,Positif,0.8291372060775757
-0,1131108551856984066,RGP_2019,2019-05-22 08:04:28,Aksi Kedaulatan Rakyat Dituding Perusuh Ini Kesaksian Mengagumkan Peserta Aksi,,0,Negatif,0.25061553716659546
-0,1131108549147467776,RGP_2019,2019-05-22 08:04:27,Kerusuhan di Tanah Abang Dipicu Penangkapan Warga oleh Polisi,,0,Negatif,0.16256418824195862
-0,1131108547285143552,RGP_2019,2019-05-22 08:04:27,Satu Warga Meninggal di Tanah Abang Kena Peluru Tajam,,0,Positif,0.9835737943649292
-0,1131108545083187201,RGP_2019,2019-05-22 08:04:26,Satu Orang Laskar FPI Pandeglang Syahid di Petamburan,,0,Positif,0.9860244393348694
-0,1131108542444912641,RGP_2019,2019-05-22 08:04:26,Rekam Aksi Beringas Brimob Saat Tangkap Pendemo Wartawan CNN Dianiaya,,0,Positif,0.8096437454223633
-0,1131108540708532229,RGP_2019,2019-05-22 08:04:25,Perlawanan Massa di Tanah Abang Berlangsung Alot,,0,Positif,0.8291372060775757
-0,1131108537617330176,RGP_2019,2019-05-22 08:04:25,Polisi Tangkap Orang Pemuda Diduga Provokator,,0,Positif,0.9763373136520386
-0,1131108535788560384,RGP_2019,2019-05-22 08:04:24,Massa yang Bertahan Teriakkan Hidup TNI Saat Truk TNI Melintas,,0,Positif,0.9417082667350769
-0,1131107369679822848,AWijaya777,2019-05-22 07:59:46,MashaAllah Tabarakallah Allahuakbar GerakanNasionalKedaulatanRakyat SaveOurDemocracy MahkamahKedaulatanRakyat DukungPRABOWO,2019gantipresiden 2019prabowosandi 2019prabowopresiden gerakannasionalkedaulatanrakyat saveourdemocracy mahkamahkedaulatanrakyat dukungprabowo ,0,Positif,0.7787084579467773
-0,1131104693696860160,10Delvin,2019-05-22 07:49:08,Download vpn proxy master Whats up dan ig di downkan viralindonesia indonesiaadilmakmur Indonesia IndonesiaMenang Indonesiaelection bandung Islam,2019gantipresiden viralindonesia indonesiaadilmakmur indonesia indonesiamenang indonesiaelection bandung islam ,0,Positif,0.9950138926506042
-0,1131104680350633985,rdhikyra,2019-05-22 07:49:05,Pembungkaman Demokrasi instagramdown WhatsAppDown DukungPRABOWO IndonesiaFraudElection,instagramdown whatsappdown dukungprabowo indonesiafraudelection 2019gantipresiden ,0,Positif,0.7787084579467773
-0,1131101709210738688,PinondangSbrng,2019-05-22 07:37:16,Alumni LBH YLBHI Serukan Copot Kapolri dan Wiranto,,0,Negatif,0.11868283152580261
-0,1131101707918823424,PinondangSbrng,2019-05-22 07:37:16,Massa Aksi Mei Temukan Peluru Tajam di Dalam Mobil Polisi,,0,Positif,0.8005662560462952
-0,1131101706375315456,PinondangSbrng,2019-05-22 07:37:16,Cerita Korban Meninggal Saat Jaga Rumah Habib Rizieq,,0,Positif,0.8920021057128906
-0,1131101704861171713,PinondangSbrng,2019-05-22 07:37:15,Polisi Akui Tak Pakai Peluru Tajam,,0,Negatif,0.07997056096792221
-0,1131101704257196032,Kerja4As,2019-05-22 07:37:15,Alumni LBH YLBHI Serukan Copot Kapolri dan Wiranto,,0,Negatif,0.11868283152580261
-0,1131101703569313794,PinondangSbrng,2019-05-22 07:37:15,Putra Habib Salim Al Jufrie Ayah Tilawah Juz Dalam Hari,,0,Positif,0.9623029828071594
-0,1131101702436925440,Kerja4As,2019-05-22 07:37:15,Massa Aksi Mei Temukan Peluru Tajam di Dalam Mobil Polisi,,0,Positif,0.8005662560462952
-0,1131101701900001280,PinondangSbrng,2019-05-22 07:37:15,Dengan Wajah Cerah AHY Ucapkan Selamat pada Jokowi,,0,Positif,0.749768853187561
-0,1131101700687880192,PinondangSbrng,2019-05-22 07:37:14,Memasuki Masjid Ini Harus Bayar,,0,Negatif,0.10331455618143082
-0,1131101700650098689,Kerja4As,2019-05-22 07:37:14,Cerita Korban Meninggal Saat Jaga Rumah Habib Rizieq,,1,Positif,0.8920021057128906
-0,1131101699270221825,PinondangSbrng,2019-05-22 07:37:14,Peserta Aksi Berjalan Santai Aparat Ngos ngosan Bilang Monyet,,0,Negatif,0.004810740705579519
-0,1131101698594869248,Kerja4As,2019-05-22 07:37:14,Polisi Akui Tak Pakai Peluru Tajam,,0,Negatif,0.07997056096792221
-0,1131101697558962176,PinondangSbrng,2019-05-22 07:37:14,Massa Ricuh Bukan Peserta Demo di Bawaslu Kata Polisi,,0,Netral,0.6878442168235779
-0,1131101696539746304,Kerja4As,2019-05-22 07:37:13,Putra Habib Salim Al Jufrie Ayah Tilawah Juz Dalam Hari,,0,Positif,0.9623029828071594
-0,1131101696007049216,PinondangSbrng,2019-05-22 07:37:13,Meletus Oknum Massa Teriaki Polisi Maling Hingga Serang Barikade,,0,Positif,0.8574230074882507
-0,1131101694933307392,Kerja4As,2019-05-22 07:37:13,Dengan Wajah Cerah AHY Ucapkan Selamat pada Jokowi,,0,Positif,0.749768853187561
-0,1131101694627078144,PinondangSbrng,2019-05-22 07:37:13,Kronologi Penangkapan Takmir Masjid Al Ittihad Tebet,,0,Positif,0.7787084579467773
-0,1131101693033238528,PinondangSbrng,2019-05-22 07:37:13,Reaksi Aparat Saat Ditanya Mengapa Sudirman Said dan Dahnil Dilarang Ikut Aksi,,0,Positif,0.9283159375190735
-0,1131101693012250624,Kerja4As,2019-05-22 07:37:13,Memasuki Masjid Ini Harus Bayar,,0,Negatif,0.10331455618143082
-0,1131101691372294144,PinondangSbrng,2019-05-22 07:37:12,Massa Aksi Sholat Isya dan Tarawih Beralas Kain Berkiblat Duri,,0,Positif,0.9064890742301941
-0,1131101691347181568,Kerja4As,2019-05-22 07:37:12,Peserta Aksi Berjalan Santai Aparat Ngos ngosan Bilang Monyet,,0,Negatif,0.004810740705579519
-0,1131101689715535872,Kerja4As,2019-05-22 07:37:12,Massa Ricuh Bukan Peserta Demo di Bawaslu Kata Polisi,,0,Netral,0.6878442168235779
-0,1131101688310505472,Kerja4As,2019-05-22 07:37:12,Meletus Oknum Massa Teriaki Polisi Maling Hingga Serang Barikade,,0,Positif,0.8574230074882507
-0,1131101686687305728,Kerja4As,2019-05-22 07:37:11,Kronologi Penangkapan Takmir Masjid Al Ittihad Tebet,,0,Positif,0.7787084579467773
-0,1131101685210898432,Kerja4As,2019-05-22 07:37:11,Reaksi Aparat Saat Ditanya Mengapa Sudirman Said dan Dahnil Dilarang Ikut Aksi,,0,Positif,0.9283159375190735
-0,1131101683122167808,Kerja4As,2019-05-22 07:37:10,Massa Aksi Sholat Isya dan Tarawih Beralas Kain Berkiblat Duri,,0,Positif,0.9064890742301941
-0,1131100221134344192,rakakustanto,2019-05-22 07:31:22,Pemilu sudah dilakukan tagar sudah dilakukan tapi masih tetap kalah malah nyalahin pihak yang menang Coba tanyakan diri sendiri dulu kenapa kalah mulu dukungprabowo dukungjokowi saveindonesia,2019gantipresiden dukungprabowo dukungjokowi saveindonesia ,1,Negatif,0.1300952136516571
-0,1131093004167581697,Kerja4As,2019-05-22 07:02:41,Redakan Bentrok di Kalibaru Pasukan TNI Disambut Hangat Warga,,0,Positif,0.8291372060775757
-0,1131093001621692416,Kerja4As,2019-05-22 07:02:40,Aksi Kedaulatan Rakyat Dituding Perusuh Ini Kesaksian Mengagumkan Peserta Aksi,,0,Negatif,0.25061553716659546
-0,1131093000275333122,Kerja4As,2019-05-22 07:02:40,Kerusuhan di Tanah Abang Dipicu Penangkapan Warga oleh Polisi,,0,Negatif,0.16256418824195862
-0,1131092998547267584,Kerja4As,2019-05-22 07:02:40,Satu Warga Meninggal di Tanah Abang Kena Peluru Tajam,,0,Positif,0.9835737943649292
-0,1131092996995330048,Kerja4As,2019-05-22 07:02:39,Satu Orang Laskar FPI Pandeglang Syahid di Petamburan,,0,Positif,0.9860244393348694
-0,1131092995741233158,Kerja4As,2019-05-22 07:02:39,Rekam Aksi Beringas Brimob Saat Tangkap Pendemo Wartawan CNN Dianiaya,,0,Positif,0.8096437454223633
-0,1131092994545922048,Kerja4As,2019-05-22 07:02:39,Perlawanan Massa di Tanah Abang Berlangsung Alot,,0,Positif,0.8291372060775757
-0,1131092993123999745,Kerja4As,2019-05-22 07:02:38,Polisi Tangkap Orang Pemuda Diduga Provokator,,0,Positif,0.9763373136520386
-0,1131092991622504448,Kerja4As,2019-05-22 07:02:38,Massa yang Bertahan Teriakkan Hidup TNI Saat Truk TNI Melintas,,0,Positif,0.9417082667350769
-0,1131092955270402054,PinondangSbrng,2019-05-22 07:02:29,Redakan Bentrok di Kalibaru Pasukan TNI Disambut Hangat Warga,,0,Positif,0.8291372060775757
-0,1131092952833495040,PinondangSbrng,2019-05-22 07:02:29,Aksi Kedaulatan Rakyat Dituding Perusuh Ini Kesaksian Mengagumkan Peserta Aksi,,0,Negatif,0.25061553716659546
-0,1131092951638138880,PinondangSbrng,2019-05-22 07:02:29,Kerusuhan di Tanah Abang Dipicu Penangkapan Warga oleh Polisi,,0,Negatif,0.16256418824195862
-0,1131092950467928064,PinondangSbrng,2019-05-22 07:02:28,Satu Warga Meninggal di Tanah Abang Kena Peluru Tajam,,0,Positif,0.9835737943649292
-0,1131092949218078721,PinondangSbrng,2019-05-22 07:02:28,Satu Orang Laskar FPI Pandeglang Syahid di Petamburan,,0,Positif,0.9860244393348694
-0,1131092947963920384,PinondangSbrng,2019-05-22 07:02:28,Rekam Aksi Beringas Brimob Saat Tangkap Pendemo Wartawan CNN Dianiaya,,0,Positif,0.8096437454223633
-0,1131092946818879490,PinondangSbrng,2019-05-22 07:02:27,Perlawanan Massa di Tanah Abang Berlangsung Alot,,0,Positif,0.8291372060775757
-0,1131092944780484608,PinondangSbrng,2019-05-22 07:02:27,Polisi Tangkap Orang Pemuda Diduga Provokator,,0,Positif,0.9763373136520386
-0,1131092942905630720,PinondangSbrng,2019-05-22 07:02:26,Massa yang Bertahan Teriakkan Hidup TNI Saat Truk TNI Melintas,,0,Positif,0.9417082667350769
-0,1131092655612370944,Alfiangunners,2019-05-22 07:01:18,para pndemo yg ampek bk bonyok dn ampek mati lu msk surga kgk masuk neraka iya jihadfisabilpolitik TangkapPRABOWO,2019gantipresiden tangkapprabowo ,3,Positif,0.9910740256309509
-0,1131090186564014086,gigiyviphurit,2019-05-22 06:51:29,Kalo memang demo ditujukan untuk pemilu yang adil dan damai kenapa sejak sebelum pemilu muncul hastag Kenapa hastagnya tidak pemiluadil,,0,Netral,0.6811653971672058
-0,1131083159070633984,Suharto_Qing_Wu,2019-05-22 06:23:34,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131081530351034368,surgarakyat,2019-05-22 06:17:05,Jembatan Kapuas I Ditutup Massa Aksi,,1,Netral,0.5979939103126526
-0,1131081523275259904,surgarakyat,2019-05-22 06:17:04,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131079026099884033,YOURMlLKYWAY,2019-05-22 06:07:08,Dari awal taun lalu kubu pendukung prabowo sendiri udh provokator bgt inget hashtag Dari hashtagnya aja udah mencerminkan konteks negatif Dia emang udh punya konsep biar orang orang mikir kalo pemerintahan jkw ini buruk maka dari itu jkw harus diganti,2019gantipresiden ,1,Negatif,0.21833261847496033
-0,1131078285771890688,RGP_2019,2019-05-22 06:04:12,TNI Merapat ke Jl Jatibaru Tanah Abang Massa Berhenti Rusuh,,0,Positif,0.974413275718689
-0,1131078281229459456,RGP_2019,2019-05-22 06:04:11,Mobil Komando Bersiap Di Seberang Rumah Prabowo,,0,Positif,0.8291372060775757
-0,1131078278415040513,RGP_2019,2019-05-22 06:04:10,Polisi Dilempari Batu TNI Dipuji,,0,Positif,0.7787084579467773
-0,1131071699707760641,BungKitaMenang,2019-05-22 05:38:02,GAGAL TOTAL hahahahaha emang enak kasian deh lo Yang kemaren koar koar gak jadi keganti KASIHAN SUNGGUH MIRIS jebolan kampus mana baginda raja prabowo subianto Kalau baginda raja sandiaga uno sih lulusan luar negeri wajar kalau cocok jadi pemimpin,2019gantipresiden ,2,Negatif,0.11216268688440323
-0,1131071485001359360,haris1924,2019-05-22 05:37:10,Penangkapan Tokoh tokoh akan Terus Dilakukan Kata Wiranto,,0,Negatif,0.1805950552225113
-0,1131071462444535808,PinondangSbrng,2019-05-22 05:37:05,TNI Merapat ke Jl Jatibaru Tanah Abang Massa Berhenti Rusuh,,0,Positif,0.974413275718689
-0,1131071457503645696,PinondangSbrng,2019-05-22 05:37:04,Moeldoko Orang Ditangkap karena Senjata Laras Panjang Ada Eksekutor,,0,Negatif,0.2815808057785034
-0,1131071454798336000,Kerja4As,2019-05-22 05:37:03,TNI Merapat ke Jl Jatibaru Tanah Abang Massa Berhenti Rusuh,,0,Positif,0.974413275718689
-0,1131066440881065984,TamTam0804,2019-05-22 05:17:08,Bro katanya tapi ini kok tetep aja ya Presidennya cuma jadi aja,2019gantipresiden 2019gantiwakilpresiden ,0,Netral,0.5197208523750305
-0,1131066440134615040,PinondangSbrng,2019-05-22 05:17:08,Mobil Komando Bersiap Di Seberang Rumah Prabowo,,0,Positif,0.8291372060775757
-0,1131066437873881089,PinondangSbrng,2019-05-22 05:17:07,Polisi Dilempari Batu TNI Dipuji,,0,Positif,0.7787084579467773
-0,1131066334656131073,suaraRakyt,2019-05-22 05:16:43,Keinginan rakyat tidak bisa di tutupin dengan kebohongan,2019gantipresiden ,1,Positif,0.8143004179000854
-0,1131065165980545024,Kerja4As,2019-05-22 05:12:04,Mobil Komando Bersiap Di Seberang Rumah Prabowo,,0,Positif,0.8291372060775757
-0,1131065163237482496,Kerja4As,2019-05-22 05:12:03,Polisi Dilempari Batu TNI Dipuji,,0,Positif,0.7787084579467773
-0,1131063346776567809,akukangenprei,2019-05-22 05:04:50,kalo hapal lagu dpt cashback ga,,1,Negatif,0.04085806384682655
-0,1131050620528594945,RGP_2019,2019-05-22 04:14:16,Lewati Kerumunan Massa Aksi Mei TNI Diteriaki Bersama Rakyat,,0,Negatif,0.693742573261261
-0,1131050618699821067,RGP_2019,2019-05-22 04:14:16,Ini Identitas Laskar FPI yang Tewas dalam Kerusuhan di Jakarta,,0,Netral,0.5788494944572449
-0,1131050616531423232,RGP_2019,2019-05-22 04:14:15,Korban Aksi Mei Anies Baswedan Enam Orang Meninggal Dunia,,0,Positif,0.8917087912559509
-0,1131050613536641024,RGP_2019,2019-05-22 04:14:14,Bentrokan Pecah di Jatibaru Jalan Aipda KS Tubun Slipi Ditutup,,0,Positif,0.8291372060775757
-0,1131050610399338496,RGP_2019,2019-05-22 04:14:14,Jembatan Kapuas I Ditutup Massa Aksi,,0,Netral,0.5979939103126526
-0,1131050608734146560,RGP_2019,2019-05-22 04:14:13,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131050607161282560,RGP_2019,2019-05-22 04:14:13,Seorang Laskar FPI Peserta Aksi Dikabarkan Tewas Di Petamburan,,0,Netral,0.5132178068161011
-0,1131050604581806080,RGP_2019,2019-05-22 04:14:12,Panglima FPI Jakarta Habib Muhsin Jelaskan Kronologi Kericuhan,,0,Positif,0.7787084579467773
-0,1131050602962792450,RGP_2019,2019-05-22 04:14:12,Polisi Klaim Tak Pakai Peluru Tajam Warga Nih Buktinya Pakai Peluru Tajam,,0,Negatif,0.13140934705734253
-0,1131050600165183489,RGP_2019,2019-05-22 04:14:11,Soal Peserta Aksi Meninggal Kombes Argo Kita Belum Dapat Informasi,,0,Netral,0.537677526473999
-0,1131050597342490625,RGP_2019,2019-05-22 04:14:10,Jakarta Siaga Aksi Mei Jokowi Pilih ke Bogor,,0,Positif,0.9704381227493286
-0,1131050595702456320,RGP_2019,2019-05-22 04:14:10,Farhan Tewas Tertembus Dua Peluru Keluarga Lakukan Protes kepada Kapolri,,0,Negatif,0.23130564391613007
-0,1131050593898946560,RGP_2019,2019-05-22 04:14:10,Amien Rais Sudah Korban Tewas,,0,Netral,0.47650426626205444
-0,1131050592049291265,RGP_2019,2019-05-22 04:14:09,Polisi Tak Dibekali Peluru Tajam Polri Sebut Hoaks Penembakan Pendemo,,0,Negatif,0.07997056096792221
-0,1131050589163593728,RGP_2019,2019-05-22 04:14:09,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131047703322943489,jshtobing,2019-05-22 04:02:40,,2019gantipresiden ,1,Positif,0.7787084579467773
-0,1131041273597575173,PinondangSbrng,2019-05-22 03:37:08,Lewati Kerumunan Massa Aksi Mei TNI Diteriaki Bersama Rakyat,,0,Negatif,0.693742573261261
-0,1131041271735308293,PinondangSbrng,2019-05-22 03:37:07,Ini Identitas Laskar FPI yang Tewas dalam Kerusuhan di Jakarta,,0,Netral,0.5788494944572449
-0,1131041269801787393,PinondangSbrng,2019-05-22 03:37:07,Korban Aksi Mei Anies Baswedan Enam Orang Meninggal Dunia,,0,Positif,0.8917087912559509
-0,1131041267784310784,PinondangSbrng,2019-05-22 03:37:06,Bentrokan Pecah di Jatibaru Jalan Aipda KS Tubun Slipi Ditutup,,0,Positif,0.8291372060775757
-0,1131041266148544512,PinondangSbrng,2019-05-22 03:37:06,Jembatan Kapuas I Ditutup Massa Aksi,,0,Netral,0.5979939103126526
-0,1131041264252706816,PinondangSbrng,2019-05-22 03:37:05,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131040048915406853,Kerja4As,2019-05-22 03:32:16,Lewati Kerumunan Massa Aksi Mei TNI Diteriaki Bersama Rakyat,,0,Negatif,0.693742573261261
-0,1131040047329947653,Kerja4As,2019-05-22 03:32:15,Ini Identitas Laskar FPI yang Tewas dalam Kerusuhan di Jakarta,,0,Netral,0.5788494944572449
-0,1131040045652152320,Kerja4As,2019-05-22 03:32:15,Korban Aksi Mei Anies Baswedan Enam Orang Meninggal Dunia,,0,Positif,0.8917087912559509
-0,1131040043802550273,Kerja4As,2019-05-22 03:32:14,Bentrokan Pecah di Jatibaru Jalan Aipda KS Tubun Slipi Ditutup,,0,Positif,0.8291372060775757
-0,1131040041793462272,Kerja4As,2019-05-22 03:32:14,Jembatan Kapuas I Ditutup Massa Aksi,,0,Netral,0.5979939103126526
-0,1131040039897575425,Kerja4As,2019-05-22 03:32:13,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131039548559912961,gamerspeed6,2019-05-22 03:30:16,RULES OF SURVIVAL MAU DITUTUP jumatberkah JokowiSekaliLagi jakarta capres gamer,jumatberkah jokowisekalilagi 2019gantipresiden jakarta pemilu2019 capres gamer ,1,Netral,0.6803826689720154
-0,1131036123675815936,suaraRakyt,2019-05-22 03:16:40,Sumber utama rupiah rusak adalah pemerintah yang terlalu ambisius yang melampaui dari kemampuannya sendiri Faisal Basri,2019gantipresiden ,1,Negatif,0.0702514797449112
-0,1131033052904189952,Buahnaga91,2019-05-22 03:04:28,TangkapPRABOWO,tangkapprabowo ,1,Positif,0.7787084579467773
-0,1131032584140365824,clara_putrri,2019-05-22 03:02:36,IndonesiaSejahtera SayaIndonesia SayaPancasila NKRIHargaMati Nawacita IndonesiaJaya JokowiRangkulRakyat JokowiMembangunIndonesia jokowipresidenku jokowiAmin indonesiamaju,indonesiasejahtera sayaindonesia sayapancasila nkrihargamati nawacita indonesiajaya jokowirangkulrakyat jokowimembangunindonesia 2019gantipresiden gantipresiden2019 jokowipresidenku jokowi2periode 2019pilihjokowi jokowiamin indonesiamaju 2019jokowilagi ,0,Positif,0.7787084579467773
-0,1131032549260574722,clara_putrri,2019-05-22 03:02:27,IndonesiaSejahtera SayaIndonesia SayaPancasila NKRIHargaMati Nawacita IndonesiaJaya JokowiRangkulRakyat JokowiMembangunIndonesia jokowipresidenku jokowiAmin indonesiamaju,indonesiasejahtera sayaindonesia sayapancasila nkrihargamati nawacita indonesiajaya jokowirangkulrakyat jokowimembangunindonesia 2019gantipresiden gantipresiden2019 jokowipresidenku jokowi2periode 2019pilihjokowi jokowiamin indonesiamaju 2019jokowilagi ,0,Positif,0.7787084579467773
-0,1131032510459080704,clara_putrri,2019-05-22 03:02:18,IndonesiaSejahtera SayaIndonesia SayaPancasila NKRIHargaMati Nawacita IndonesiaJaya JokowiRangkulRakyat JokowiMembangunIndonesia jokowipresidenku jokowiAmin indonesiamaju,indonesiasejahtera sayaindonesia sayapancasila nkrihargamati nawacita indonesiajaya jokowirangkulrakyat jokowimembangunindonesia 2019gantipresiden gantipresiden2019 jokowipresidenku jokowi2periode 2019pilihjokowi jokowiamin indonesiamaju 2019jokowilagi ,0,Positif,0.7787084579467773
-0,1131032476376346625,Kerja4As,2019-05-22 03:02:10,Seorang Laskar FPI Peserta Aksi Dikabarkan Tewas Di Petamburan,,0,Netral,0.5132178068161011
-0,1131032474526584833,Kerja4As,2019-05-22 03:02:10,Panglima FPI Jakarta Habib Muhsin Jelaskan Kronologi Kericuhan,,0,Positif,0.7787084579467773
-0,1131032473138343938,Kerja4As,2019-05-22 03:02:09,Polisi Klaim Tak Pakai Peluru Tajam Warga Nih Buktinya Pakai Peluru Tajam,,0,Negatif,0.13140934705734253
-0,1131032471460556801,Kerja4As,2019-05-22 03:02:09,Soal Peserta Aksi Meninggal Kombes Argo Kita Belum Dapat Informasi,,0,Netral,0.537677526473999
-0,1131032470051274752,Kerja4As,2019-05-22 03:02:09,Jakarta Siaga Aksi Mei Jokowi Pilih ke Bogor,,0,Positif,0.9704381227493286
-0,1131032469623283712,clara_putrri,2019-05-22 03:02:08,IndonesiaSejahtera SayaIndonesia SayaPancasila NKRIHargaMati Nawacita IndonesiaJaya JokowiRangkulRakyat JokowiMembangunIndonesia jokowipresidenku jokowiAmin indonesiamaju,indonesiasejahtera sayaindonesia sayapancasila nkrihargamati nawacita indonesiajaya jokowirangkulrakyat jokowimembangunindonesia 2019gantipresiden gantipresiden2019 jokowipresidenku jokowi2periode 2019pilihjokowi jokowiamin indonesiamaju 2019jokowilagi ,0,Positif,0.7787084579467773
-0,1131032468868481024,PinondangSbrng,2019-05-22 03:02:08,Seorang Laskar FPI Peserta Aksi Dikabarkan Tewas Di Petamburan,,0,Netral,0.5132178068161011
-0,1131032468210036736,Kerja4As,2019-05-22 03:02:08,Farhan Tewas Tertembus Dua Peluru Keluarga Lakukan Protes kepada Kapolri,,0,Negatif,0.23130564391613007
-0,1131032467434037254,PinondangSbrng,2019-05-22 03:02:08,Panglima FPI Jakarta Habib Muhsin Jelaskan Kronologi Kericuhan,,0,Positif,0.7787084579467773
-0,1131032466658123776,Kerja4As,2019-05-22 03:02:08,Amien Rais Sudah Korban Tewas,,0,Netral,0.47650426626205444
-0,1131032466091855872,PinondangSbrng,2019-05-22 03:02:08,Polisi Klaim Tak Pakai Peluru Tajam Warga Nih Buktinya Pakai Peluru Tajam,,0,Negatif,0.13140934705734253
-0,1131032464644804608,PinondangSbrng,2019-05-22 03:02:07,Soal Peserta Aksi Meninggal Kombes Argo Kita Belum Dapat Informasi,,0,Netral,0.537677526473999
-0,1131032464493821952,Kerja4As,2019-05-22 03:02:07,Polisi Tak Dibekali Peluru Tajam Polri Sebut Hoaks Penembakan Pendemo,,0,Negatif,0.07997056096792221
-0,1131032463088717824,PinondangSbrng,2019-05-22 03:02:07,Jakarta Siaga Aksi Mei Jokowi Pilih ke Bogor,,0,Positif,0.9704381227493286
-0,1131032460895117318,PinondangSbrng,2019-05-22 03:02:06,Farhan Tewas Tertembus Dua Peluru Keluarga Lakukan Protes kepada Kapolri,,0,Negatif,0.23130564391613007
-0,1131032459284504577,PinondangSbrng,2019-05-22 03:02:06,Amien Rais Sudah Korban Tewas,,0,Netral,0.47650426626205444
-0,1131032457174835200,PinondangSbrng,2019-05-22 03:02:06,Polisi Tak Dibekali Peluru Tajam Polri Sebut Hoaks Penembakan Pendemo,,0,Negatif,0.07997056096792221
-0,1131032445787074562,clara_putrri,2019-05-22 03:02:03,IndonesiaSejahtera SayaIndonesia SayaPancasila NKRIHargaMati Nawacita IndonesiaJaya JokowiRangkulRakyat JokowiMembangunIndonesia jokowipresidenku jokowiAmin indonesiamaju,indonesiasejahtera sayaindonesia sayapancasila nkrihargamati nawacita indonesiajaya jokowirangkulrakyat jokowimembangunindonesia 2019gantipresiden gantipresiden2019 jokowipresidenku jokowi2periode 2019pilihjokowi jokowiamin indonesiamaju 2019jokowilagi ,0,Positif,0.7787084579467773
-0,1131029666045710338,alintt_markani,2019-05-22 02:51:00,Dikira doang yg bisa trending bnyk diem sblm pemilu lalu seolah pendukung nya di anggap sedikit sama kubu sebelah Kita sepakat nongol setelah pencoblosan berlangsung Ga dan grasa grusu wkwk TangkapPRABOWO,tangkapprabowo ,0,Positif,0.8427234292030334
-0,1131026464516726784,elangsaputra828,2019-05-22 02:38:17,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131026285197549575,elangsaputra828,2019-05-22 02:37:34,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131025701614735360,elangsaputra828,2019-05-22 02:35:15,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131025409011666944,elangsaputra828,2019-05-22 02:34:05,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131025281462939648,elangsaputra828,2019-05-22 02:33:35,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131025129130086405,elangsaputra828,2019-05-22 02:32:58,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131025012029157376,elangsaputra828,2019-05-22 02:32:30,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131024992190193665,elangsaputra828,2019-05-22 02:32:26,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131024971596066818,elangsaputra828,2019-05-22 02:32:21,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131024933725696000,elangsaputra828,2019-05-22 02:32:12,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131024915468042246,Kerja4As,2019-05-22 02:32:07,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131024717278662657,elangsaputra828,2019-05-22 02:31:20,prabowo prabowosandi prabowojumatandimana prabowopresiden sandiagauno,2019prabowopresiden 2019prabowosandi 2019gantipresiden 2019prabowosandiuno 2019jokowilengser 2019gerindramenang prabowo prabowosandi prabowojumatandimana prabowopresiden prabowosandi2019 sandiagauno ,0,Positif,0.7787084579467773
-0,1131023651225112576,PinondangSbrng,2019-05-22 02:27:06,Panglima FPI Jakarta Pihak Ketiga Sengaja Membuat Kekacauan,,0,Positif,0.930718719959259
-0,1131021923138166784,2019PilihPKS,2019-05-22 02:20:14,Alhamdulillah Dukungan umat terus mengalir utk PKS Habib Salim Ketua MS PKS tak bersilaturrahim menyatukan umat utk bersama PKS berjuang menangkan PRABOWO SANDI,2019gantipresiden 17aprilpilihpks ,0,Positif,0.9730058908462524
-0,1131021322106990592,Indones04075812,2019-05-22 02:17:51,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021295431249920,Indones04075812,2019-05-22 02:17:44,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021267841081344,Indones04075812,2019-05-22 02:17:38,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021242042003456,Indones04075812,2019-05-22 02:17:32,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021216297263104,Indones04075812,2019-05-22 02:17:25,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021195338321920,ranioktaviani92,2019-05-22 02:17:20,Katanya sih tagarnya keren eh setalah pendaftaran Capres kurang hari malah tagarnya berubah Partai Allah ternyata isinya orang cakar cakaran saja lebih baik saja,2019gantipresiden 2019gantikardus jokowi2periode ,0,Positif,0.9904255270957947
-0,1131021188044447744,Indones04075812,2019-05-22 02:17:19,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021166661914624,Indones04075812,2019-05-22 02:17:14,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021161041502208,kebundosa,2019-05-22 02:17:12,malahan our beloved DESSERT sengaja BUDDIES lah yg bs memicu aksi sebesar ini kapan mulai muncul tagar awal bulan setelah apakah kita sdh tahu kalo prabowo mau nyalon lagi hampir semuanya belum,,0,Positif,0.815460741519928
-0,1131021144675442688,Indones04075812,2019-05-22 02:17:08,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131021101662842881,Indones04075812,2019-05-22 02:16:58,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,1,Positif,0.9854223728179932
-0,1131021046880956417,Indones04075812,2019-05-22 02:16:45,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,1,Positif,0.9854223728179932
-0,1131021028971253760,Indones04075812,2019-05-22 02:16:41,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,1,Positif,0.9854223728179932
-0,1131021004333961217,Indones04075812,2019-05-22 02:16:35,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,1,Positif,0.9854223728179932
-0,1131020986260762624,Indones04075812,2019-05-22 02:16:31,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,1,Positif,0.9854223728179932
-0,1131020967453446144,Indones04075812,2019-05-22 02:16:26,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020943243931648,Indones04075812,2019-05-22 02:16:20,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020921966276608,Indones04075812,2019-05-22 02:16:15,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020896389308416,Indones04075812,2019-05-22 02:16:09,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020866005848066,Indones04075812,2019-05-22 02:16:02,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020845684482048,Indones04075812,2019-05-22 02:15:57,jokowi jokowilagi marufamin jokowimenang indonesia jokowidodo bhinnekatunggalika persatuan nkrihargamati,jokowi jokowilagi jokowilagi2019 2019tetapjokowi marufamin jokowimenang indonesia jokowidodo 2019gantipresiden bhinnekatunggalika persatuan nkrihargamati ,0,Positif,0.9854223728179932
-0,1131020457732431872,RGP_2019,2019-05-22 02:14:25,Massa Ditembaki Teriak di Masjid Al Makmur Tanah Abang,,0,Positif,0.8291372060775757
-0,1131020455152889862,RGP_2019,2019-05-22 02:14:24,RS Akui Terima Pasien Korban Tertembak Tak Cuma Satu,,0,Positif,0.9575430154800415
-0,1131020452510478336,RGP_2019,2019-05-22 02:14:23,Rusuh Demo Bawaslu Polisi Bantah Kejar Massa hingga ke Masjid,,0,Positif,0.966745913028717
-0,1131020451029946368,RGP_2019,2019-05-22 02:14:23,Satu Warga Meninggal di Tanah Abang Kena Peluru Tajam,,0,Positif,0.9835737943649292
-0,1131020448261652485,RGP_2019,2019-05-22 02:14:22,Rekam Aksi Beringas Brimob Saat Tangkap Pendemo Wartawan CNN Dianiaya,,0,Positif,0.8096437454223633
-0,1131020444625186822,RGP_2019,2019-05-22 02:14:21,Buah Keputusan KPU Perang Demonstran Lawan Polisi,,0,Negatif,0.1867690235376358
-0,1131020442943102976,RGP_2019,2019-05-22 02:14:21,Polisi Sebut Massa yang Ricuh di Jalan Thamrin Bukan Peserta Demo di Bawaslu,,0,Positif,0.9813096523284912
-0,1131020439868854272,RGP_2019,2019-05-22 02:14:20,Situasi Terkini di Jalan KS Tubun Petamburan Bentrok Masih Terjadi,,0,Netral,0.5819962024688721
-0,1131020438245695495,RGP_2019,2019-05-22 02:14:20,Dikaitkan dengan Eggi Sudjana dan Kisah People Power di Filipina Adhie Massardi Dipanggil Polisi,,0,Positif,0.9909465312957764
-0,1131020436437917701,RGP_2019,2019-05-22 02:14:20,BREAKING NEWS Massa Menyerang dan Membakar Asrama Brimob Petamburan,,0,Positif,0.9789738059043884
-0,1131020434814709760,RGP_2019,2019-05-22 02:14:19,Kisruh Jakarta Pendukung Serukan TangkapPrabowo,tangkapprabowo ,0,Positif,0.7787084579467773
-0,1131020433267015681,RGP_2019,2019-05-22 02:14:19,Lawan Polisi Massa Persenjatai Diri dengan Batu dan Botol Kaca Sebagian Bawa Sajam,,0,Positif,0.9935312867164612
-0,1131020431266373643,RGP_2019,2019-05-22 02:14:18,Asrama Brimob Petamburan Diserang Massa Sejumlah Mobil di Parkiran Dibakar,,0,Positif,0.8291372060775757
-0,1131020429416706049,RGP_2019,2019-05-22 02:14:18,Seorang Laskar FPI Peserta Aksi Dikabarkan Tewas di Tanah Abang,,0,Netral,0.5132178068161011
-0,1131019908949663744,Kerja4As,2019-05-22 02:12:14,Massa Ditembaki Teriak di Masjid Al Makmur Tanah Abang,,0,Positif,0.8291372060775757
-0,1131019907162935302,Kerja4As,2019-05-22 02:12:13,RS Akui Terima Pasien Korban Tertembak Tak Cuma Satu,,0,Positif,0.9575430154800415
-0,1131019905120186368,Kerja4As,2019-05-22 02:12:13,Rusuh Demo Bawaslu Polisi Bantah Kejar Massa hingga ke Masjid,,0,Positif,0.966745913028717
+0,1132524016781201410,m_dekamora,2019-05-26 05:49:01,from anugerah kehidupan semoga bermanfaat pasfriends pondokpinang prabowo sandiagauno prabowosandi gerindra kajianislam,pasfriends pondokpinang pilpres2019 prabowo sandiagauno prabowosandi 2019gantipresiden 2019prabowopresiden 2019prabowosandi gerindra kajianislam ,0,Positif,0.7787084579467773
+0,1132519449691430912,paduka2019,2019-05-26 05:30:52,Anggap saja andri bibir yang menjadi korban lalu okmun pelaku kekerasan ini apa akan diadili alias di meja hijaukan DukungPRABOWO PrabowoJanganTemuiJokowi JokowiMundurlah JokowiLegowoMundur,2019gantipresiden dukungprabowo prabowojangantemuijokowi jokowimundurlah jokowilegowomundur ,1,Netral,0.536171555519104
+0,1132510509733953536,RGP_2019,2019-05-26 04:55:21,Paman Reyhan Menunjuk Pelipis Kiri Itu Bolong,,0,Positif,0.7088355422019958
+0,1132510508110831616,RGP_2019,2019-05-26 04:55:20,Yang Kehilangan Warung Diundang Istana Yang Kehilangan Anak Diabaikan Istana,,0,Positif,0.9699437618255615
+0,1132508268314542080,suaraRakyt,2019-05-26 04:46:26,Senantiasa bersama umat menang atau kalah Ust Bachtiar Nasir,2019gantipresiden ,2,Positif,0.7787084579467773
+0,1132500934548807680,Khotoe1,2019-05-26 04:17:18,Kayak gini Bidadari sedih lho Di Rejim ini micin dan sunlight lebih berharga dari nyawa anak Bangsa TangkapUlinYusron Yang Kehilangan Warung Diundang Istana Yang Kehilangan Anak Diabaikan Istana,tangkapulinyusron ,2,Positif,0.8838293552398682
+0,1132500752226693121,suaraRakyt,2019-05-26 04:16:34,Yuk ganti,2019gantipresiden ,2,Positif,0.965268075466156
+0,1132494645102022656,PinondangSbrng,2019-05-26 03:52:18,Paman Reyhan Menunjuk Pelipis Kiri Itu Bolong,,0,Positif,0.7088355422019958
+0,1132494375550902272,Kerja4As,2019-05-26 03:51:14,Paman Reyhan Menunjuk Pelipis Kiri Itu Bolong,,0,Positif,0.7088355422019958
+0,1132494353098784768,indoselalu,2019-05-26 03:51:09,Paman Reyhan Menunjuk Pelipis Kiri Itu Bolong,,0,Positif,0.7088355422019958
+0,1132489501316489216,UncleJames01,2019-05-26 03:31:52,Perlakuan Istana Hilang Warung Diundang Hilang Anak Diabaikan,,0,Positif,0.7787084579467773
+0,1132488289494196225,indoselalu,2019-05-26 03:27:03,Yang Kehilangan Warung Diundang Istana Yang Kehilangan Anak Diabaikan Istana,,1,Positif,0.9699437618255615
+0,1132487037892866048,PinondangSbrng,2019-05-26 03:22:05,Yang Kehilangan Warung Diundang Istana Yang Kehilangan Anak Diabaikan Istana,,0,Positif,0.9699437618255615
+0,1132486839317745665,Kerja4As,2019-05-26 03:21:17,Yang Kehilangan Warung Diundang Istana Yang Kehilangan Anak Diabaikan Istana,,0,Positif,0.9699437618255615
+0,1132485677654761472,suaraRakyt,2019-05-26 03:16:40,Dengerin lagu yuk,2019gantipresiden ,2,Positif,0.965268075466156
+0,1132480944605138945,fachim,2019-05-26 02:57:52,Beginilah kekejaman aparat,2019gantipresiden 2019prabowopresiden ,2,Positif,0.7787084579467773
+0,1132478774862393347,m_dekamora,2019-05-26 02:49:15,from j d prabowo sandiuno pasfriends pondokpinang prabowo sandiagauno prabowosandi gerindra kajianislam salamduajari,pasfriends pondokpinang pilpres2019 prabowo sandiagauno prabowosandi 2019gantipresiden 2019prabowopresiden 2019prabowosandi gerindra kajianislam salamduajari ,2,Positif,0.7787084579467773
+0,1132469133977706498,cjmofcjatim,2019-05-26 02:10:56,Bagi para cebong dan kampret nih lihat video ini dulu biar ati adem Persahabatan Bagai Kepompong Versi Jokowi amp Prabowo lewat,2019gantipresiden 2019tetapjokowi ,4,Negatif,0.07215902954339981
+0,1132448650414632960,CintaLenstari,2019-05-26 00:49:32,Polisi Buru Penyebar Video Pengeroyokan Warga di Masjid Al Huda,,0,Negatif,0.3390800654888153
+0,1132440343234748416,suaraRakyt,2019-05-26 00:16:32,Keinginan rakyat tidak bisa di tutupin dengan kebohongan,2019gantipresiden ,2,Positif,0.8143004179000854
+0,1132432755529175040,suaraRakyt,2019-05-25 23:46:23,,2019gantipresiden ,3,Positif,0.7787084579467773
+0,1132417653270691840,suaraRakyt,2019-05-25 22:46:22,Terus suarakan,2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden 2019gantipresiden ,2,Positif,0.964210033416748
+0,1132402555517001728,suaraRakyt,2019-05-25 21:46:22,LSI Denny JA Gerakan Terbukti Sangat Disukai Masyarakat,2019gantipresiden ,2,Positif,0.9921060800552368
+0,1132395788720627713,m_dekamora,2019-05-25 21:19:29,from suararakyatjelata comeback pasfriends pondokpinang prabowo sandiagauno prabowosandi gerindra kajianislam salamduajari,pasfriends pondokpinang pilpres2019 prabowo sandiagauno prabowosandi 2019gantipresiden 2019prabowopresiden 2019prabowosandi gerindra kajianislam salamduajari ,2,Positif,0.7787084579467773
+0,1132395404383834112,mbaH_tugaran,2019-05-25 21:17:57,Makanya sah akhiri dan mari kita kembalikan demokrasi dn kedaulatan rakyat DARI RAKYAT OLEH RAKYAT DAN UNTUK RAKYAT,2019gantipresiden ,2,Positif,0.9962629675865173
+0,1132376002699522048,maxdaniell,2019-05-25 20:00:52,BelaKedaulatanRakyat SaveDemokrasi SaveNKRI,belakedaulatanrakyat 2019gantipresiden savedemokrasi savenkri ,1,Positif,0.7787084579467773
+0,1132375637782482944,maxdaniell,2019-05-25 19:59:25,LawanKecurangan LawanKetidakadilan SaveDemokrasi SaveNKRI,lawankecurangan lawanketidakadilan 2019gantipresiden savedemokrasi savenkri ,2,Positif,0.7787084579467773
+0,1132372356293259264,suaraRakyt,2019-05-25 19:46:22,,2019gantipresiden ,2,Positif,0.7787084579467773
+0,1132364849650946049,suaraRakyt,2019-05-25 19:16:33,Sumber utama rupiah rusak adalah pemerintah yang terlalu ambisius yang melampaui dari kemampuannya sendiri Faisal Basri,2019gantipresiden ,2,Negatif,0.0702514797449112
+0,1132344340670341121,sandhisandoro,2019-05-25 17:55:03,Paman Harun Saya Disuruh Tanda Tangan untuk Tidak Menuntut,,0,Positif,0.7938956022262573
+0,1132342155882553344,suaraRakyt,2019-05-25 17:46:22,Gerakan adalah Legal Sah dan Konstitusional,2019gantipresiden ,3,Positif,0.9825465679168701
+0,1132329279705014272,RGP_2019,2019-05-25 16:55:12,Paman Harun Saya Disuruh Tanda Tangan untuk Tidak Menuntut,,0,Positif,0.7938956022262573
+0,1132329278199275520,RGP_2019,2019-05-25 16:55:12,Kesaksian Warga Pria yang Dipukuli Oknum Polisi Bukan Andri Bibir,,0,Positif,0.9897335171699524
+0,1132329275397484544,RGP_2019,2019-05-25 16:55:11,Sahabat Dengar Suara Tembakan Sebelum Badan Reyhan Ambruk,,0,Positif,0.7787084579467773
+0,1132329273992404993,RGP_2019,2019-05-25 16:55:11,BPN Nilai Rencana Rekonsiliasi Jokowi Prabowo Hanya Wacana Saja,,0,Positif,0.9408764839172363
+0,1132329272234913793,RGP_2019,2019-05-25 16:55:10,Hipmi Undang Bukber Bareng Jokowi Sandi Sudah Ada Jadwal Buka Puasa Lain,,0,Negatif,0.33884066343307495
+0,1132329270200737792,RGP_2019,2019-05-25 16:55:10,Disindir Tak Support Polisi Anies Kita Hadapi Musuh Sama Para Perusuh,,0,Positif,0.9752054214477539
+0,1132329268548128773,RGP_2019,2019-05-25 16:55:09,Dampak Penembakan di Purwokerto Kantor Polisi Kini Dijaga Ketat,,0,Positif,0.8291372060775757
+0,1132329265528279042,RGP_2019,2019-05-25 16:55:09,Polisi Buru Penyebar Video Pengeroyokan Warga di Masjid Al Huda,,0,Negatif,0.3390800654888153
+0,1132325924605587456,fuyonnnn,2019-05-25 16:41:52,Itu yang pake kaos besok mudik jangan lewat tol lewat got aja,,0,Positif,0.9894444346427917
+0,1132324295781146624,KaisaNoona_,2019-05-25 16:35:24,Aku merasa kiamat semakin dekat kalau beliau naik lagi jadi presiden mikirnyaa jadi sedih JokowiMundurlah DiskualifikasiJokowi,jokowimundurlah diskualifikasijokowi 2019gantipresiden ,2,Negatif,0.6954802870750427
+0,1132319531509006336,suaraRakyt,2019-05-25 16:16:28,Senantiasa bersama umat menang atau kalah Ust Bachtiar Nasir,2019gantipresiden ,2,Positif,0.7787084579467773
+0,1132319446150852610,Kerja4As,2019-05-25 16:16:08,Paman Harun Saya Disuruh Tanda Tangan untuk Tidak Menuntut,,0,Positif,0.7938956022262573
+0,1132318428264566785,PinondangSbrng,2019-05-25 16:12:05,Paman Harun Saya Disuruh Tanda Tangan untuk Tidak Menuntut,,0,Positif,0.7938956022262573
+0,1132318423789318145,indoselalu,2019-05-25 16:12:04,Paman Harun Saya Disuruh Tanda Tangan untuk Tidak Menuntut,,0,Positif,0.7938956022262573
+0,1132317887199186944,lildicky28_,2019-05-25 16:09:56,NKRI negara kerusuhan revublik indonesia indonesia IndonesiaUntukDunia IndonesiaDamai,indonesia 2019gantipresiden indonesiauntukdunia indonesiadamai ,2,Positif,0.9913793802261353
+0,1132315629283766274,om_eto,2019-05-25 16:00:58,Saya masih yakin Entah bagaimana caranya Allah yg punya jalan Insya Allah,2019gantipresiden ,0,Positif,0.9887075424194336
+0,1132314364969594880,umi_mqryam,2019-05-25 15:55:56,PS,2019gantipresiden ,0,Positif,0.7787084579467773
+0,1132311960647659520,suaraRakyt,2019-05-25 15:46:23,Masyarakat Indonesia yg di Sydney Australia ini pun menginginkan Presiden Baru,2019gantipresiden ,2,Negatif,0.33743801712989807
+0,1132311921053569025,Kerja4As,2019-05-25 15:46:13,Kesaksian Warga Pria yang Dipukuli Oknum Polisi Bukan Andri Bibir,,0,Positif,0.9897335171699524
+0,1132310905126043653,indoselalu,2019-05-25 15:42:11,Kesaksian Warga Pria yang Dipukuli Oknum Polisi Bukan Andri Bibir,,0,Positif,0.9897335171699524
+0,1132310904861806597,PinondangSbrng,2019-05-25 15:42:11,Kesaksian Warga Pria yang Dipukuli Oknum Polisi Bukan Andri Bibir,,0,Positif,0.9897335171699524
+0,1132308364791304192,PinondangSbrng,2019-05-25 15:32:06,Sahabat Dengar Suara Tembakan Sebelum Badan Reyhan Ambruk,,0,Positif,0.7787084579467773
+0,1132308362656473093,PinondangSbrng,2019-05-25 15:32:05,BPN Nilai Rencana Rekonsiliasi Jokowi Prabowo Hanya Wacana Saja,,0,Positif,0.9408764839172363
+0,1132308361096175621,PinondangSbrng,2019-05-25 15:32:05,Hipmi Undang Bukber Bareng Jokowi Sandi Sudah Ada Jadwal Buka Puasa Lain,,0,Negatif,0.33884066343307495
+0,1132308359309406208,PinondangSbrng,2019-05-25 15:32:04,Disindir Tak Support Polisi Anies Kita Hadapi Musuh Sama Para Perusuh,,0,Positif,0.9752054214477539
+0,1132308357363245056,PinondangSbrng,2019-05-25 15:32:04,Dampak Penembakan di Purwokerto Kantor Polisi Kini Dijaga Ketat,,0,Positif,0.8291372060775757
+0,1132308354892804096,PinondangSbrng,2019-05-25 15:32:03,Polisi Buru Penyebar Video Pengeroyokan Warga di Masjid Al Huda,,0,Negatif,0.3390800654888153
+0,1132308098717061120,irfanhanafi1096,2019-05-25 15:31:02,,2019gantipresiden 2019gajadipresiden ,1,Positif,0.7787084579467773
+0,1132307182932963330,indoselalu,2019-05-25 15:27:24,Sahabat Dengar Suara Tembakan Sebelum Badan Reyhan Ambruk,,0,Positif,0.7787084579467773
+0,1132307181615931392,indoselalu,2019-05-25 15:27:24,BPN Nilai Rencana Rekonsiliasi Jokowi Prabowo Hanya Wacana Saja,,0,Positif,0.9408764839172363
+0,1132307180265324545,indoselalu,2019-05-25 15:27:23,Hipmi Undang Bukber Bareng Jokowi Sandi Sudah Ada Jadwal Buka Puasa Lain,,0,Negatif,0.33884066343307495
+0,1132307178516303873,indoselalu,2019-05-25 15:27:23,Disindir Tak Support Polisi Anies Kita Hadapi Musuh Sama Para Perusuh,,0,Positif,0.9752054214477539
+0,1132307177186709504,indoselalu,2019-05-25 15:27:22,Dampak Penembakan di Purwokerto Kantor Polisi Kini Dijaga Ketat,,0,Positif,0.8291372060775757
+0,1132307175550980096,indoselalu,2019-05-25 15:27:22,Polisi Buru Penyebar Video Pengeroyokan Warga di Masjid Al Huda,,0,Negatif,0.3390800654888153
+0,1132306900513710080,Kerja4As,2019-05-25 15:26:16,Sahabat Dengar Suara Tembakan Sebelum Badan Reyhan Ambruk,,0,Positif,0.7787084579467773
+0,1132306898764619776,Kerja4As,2019-05-25 15:26:16,BPN Nilai Rencana Rekonsiliasi Jokowi Prabowo Hanya Wacana Saja,,0,Positif,0.9408764839172363
+0,1132306897435058176,Kerja4As,2019-05-25 15:26:16,Hipmi Undang Bukber Bareng Jokowi Sandi Sudah Ada Jadwal Buka Puasa Lain,,0,Negatif,0.33884066343307495
+0,1132306896159989760,Kerja4As,2019-05-25 15:26:15,Disindir Tak Support Polisi Anies Kita Hadapi Musuh Sama Para Perusuh,,0,Positif,0.9752054214477539
+0,1132306894926819328,Kerja4As,2019-05-25 15:26:15,Dampak Penembakan di Purwokerto Kantor Polisi Kini Dijaga Ketat,,0,Positif,0.8291372060775757
+0,1132306893165203459,Kerja4As,2019-05-25 15:26:15,Polisi Buru Penyebar Video Pengeroyokan Warga di Masjid Al Huda,,0,Negatif,0.3390800654888153
+0,1132306142808330241,DenikhazA,2019-05-25 15:23:16,Biiznillah Tugas Kita Merusuh Saja Biar yang Disalahkan,,0,Positif,0.9859212040901184
+0,1132305518460989440,Lebahzzzz,2019-05-25 15:20:47,PrabowoJanganTemuiJokowi,prabowojangantemuijokowi 2019gantipresiden ,0,Positif,0.7787084579467773
+0,1132301063208366080,lukyrakhman,2019-05-25 15:03:05,,2019gantipresiden ,0,Positif,0.7787084579467773
+0,1132299564659159042,indoselalu,2019-05-25 14:57:07,Teuku Yazhid Pastikan Bukan Pria Berserban Hijau yang Ancam Jokowi,,0,Positif,0.9897335171699524
+0,1132299563069575168,indoselalu,2019-05-25 14:57:07,Ketua RW Korban Rusuh Anak Anak Masjid yang Mau Bangunin Sahur,,0,Positif,0.9466188549995422
+0,1132299560922091520,indoselalu,2019-05-25 14:57:07,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132299558371962880,indoselalu,2019-05-25 14:57:06,Paman Harun Saya Disuruh Tanda Tangan Agar Tak Menuntut,,0,Negatif,0.26413390040397644
+0,1132299556660666369,indoselalu,2019-05-25 14:57:06,Polisi Akan Buru Penyebar Video Aparat Keroyok Warga,,0,Positif,0.8019107580184937
+0,1132299554504826881,indoselalu,2019-05-25 14:57:05,Cerita Warga Soal Aksi Beringas Aparat di Kampung Bali,,0,Netral,0.664359450340271
+0,1132299319908945922,Kerja4As,2019-05-25 14:56:09,Teuku Yazhid Pastikan Bukan Pria Berserban Hijau yang Ancam Jokowi,,0,Positif,0.9897335171699524
+0,1132299318545788928,Kerja4As,2019-05-25 14:56:09,Ketua RW Korban Rusuh Anak Anak Masjid yang Mau Bangunin Sahur,,0,Positif,0.9466188549995422
+0,1132299316876517376,Kerja4As,2019-05-25 14:56:08,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132299315362320384,Kerja4As,2019-05-25 14:56:08,Paman Harun Saya Disuruh Tanda Tangan Agar Tak Menuntut,,0,Negatif,0.26413390040397644
+0,1132299313533661186,Kerja4As,2019-05-25 14:56:08,Polisi Akan Buru Penyebar Video Aparat Keroyok Warga,,0,Positif,0.8019107580184937
+0,1132299312053010432,Kerja4As,2019-05-25 14:56:07,Cerita Warga Soal Aksi Beringas Aparat di Kampung Bali,,0,Netral,0.664359450340271
+0,1132299094007918592,RGP_2019,2019-05-25 14:55:15,Teuku Yazhid Pastikan Bukan Pria Berserban Hijau yang Ancam Jokowi,,0,Positif,0.9897335171699524
+0,1132299092183396352,RGP_2019,2019-05-25 14:55:15,Ketua RW Korban Rusuh Anak Anak Masjid yang Mau Bangunin Sahur,,0,Positif,0.9466188549995422
+0,1132299089377468416,RGP_2019,2019-05-25 14:55:14,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132299086504308736,RGP_2019,2019-05-25 14:55:13,Paman Harun Saya Disuruh Tanda Tangan Agar Tak Menuntut,,0,Negatif,0.26413390040397644
+0,1132299084839215104,RGP_2019,2019-05-25 14:55:13,Polisi Akan Buru Penyebar Video Aparat Keroyok Warga,,0,Positif,0.8019107580184937
+0,1132299083148873729,RGP_2019,2019-05-25 14:55:13,Cerita Warga Soal Aksi Beringas Aparat di Kampung Bali,,0,Netral,0.664359450340271
+0,1132299081538252801,RGP_2019,2019-05-25 14:55:12,Paman Harun Saya disuruh tanda tangan untuk tidak menuntut,,0,Positif,0.7938956022262573
+0,1132299078472224769,RGP_2019,2019-05-25 14:55:12,Mengapa Framing Nomor yang Dipilih,,0,Positif,0.8856354355812073
+0,1132299076840624128,RGP_2019,2019-05-25 14:55:11,Serang Tim Medis dan Demonstran Polri Dilaporkan ke Mahkamah Internasional,,0,Positif,0.9712342023849487
+0,1132299073942413313,RGP_2019,2019-05-25 14:55:10,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132299072252129280,RGP_2019,2019-05-25 14:55:10,Gugat Hasil Pilpres ke MK Sandiaga Persen TPS Provinsi Ada Anomali,,0,Netral,0.6574949026107788
+0,1132299069160873984,RGP_2019,2019-05-25 14:55:09,Blokir Sosmed Dinilai KEBIJAKAN DUNGU Kampanye Internet Positif Tapi Sekarang Ramai ramai Pakai VPN,,0,Negatif,0.004229072481393814
+0,1132299066262609925,RGP_2019,2019-05-25 14:55:09,Eks Komandan Korps Marinir Pemilu Sekarang Paling Curang,,0,Negatif,0.002944648964330554
+0,1132298358314479617,PinondangSbrng,2019-05-25 14:52:20,Teuku Yazhid Pastikan Bukan Pria Berserban Hijau yang Ancam Jokowi,,0,Positif,0.9897335171699524
+0,1132298356259270656,PinondangSbrng,2019-05-25 14:52:19,Ketua RW Korban Rusuh Anak Anak Masjid yang Mau Bangunin Sahur,,0,Positif,0.9466188549995422
+0,1132298354556317696,PinondangSbrng,2019-05-25 14:52:19,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132298352757006336,PinondangSbrng,2019-05-25 14:52:19,Paman Harun Saya Disuruh Tanda Tangan Agar Tak Menuntut,,0,Negatif,0.26413390040397644
+0,1132298350223663104,PinondangSbrng,2019-05-25 14:52:18,Polisi Akan Buru Penyebar Video Aparat Keroyok Warga,,0,Positif,0.8019107580184937
+0,1132298348659118080,PinondangSbrng,2019-05-25 14:52:18,Cerita Warga Soal Aksi Beringas Aparat di Kampung Bali,,1,Netral,0.664359450340271
+0,1132292037007556608,indoselalu,2019-05-25 14:27:13,Paman Harun Saya disuruh tanda tangan untuk tidak menuntut,,0,Positif,0.7938956022262573
+0,1132290753496064000,PinondangSbrng,2019-05-25 14:22:07,Paman Harun Saya disuruh tanda tangan untuk tidak menuntut,,0,Positif,0.7938956022262573
+0,1132290537413840897,Kerja4As,2019-05-25 14:21:15,Paman Harun Saya disuruh tanda tangan untuk tidak menuntut,,0,Positif,0.7938956022262573
+0,1132284452258942976,indoselalu,2019-05-25 13:57:04,Mengapa Framing Nomor yang Dipilih,,0,Positif,0.8856354355812073
+0,1132284449905946626,indoselalu,2019-05-25 13:57:04,Serang Tim Medis dan Demonstran Polri Dilaporkan ke Mahkamah Internasional,,0,Positif,0.9712342023849487
+0,1132281933961023488,PinondangSbrng,2019-05-25 13:47:04,Mengapa Framing Nomor yang Dipilih,,0,Positif,0.8856354355812073
+0,1132281931905798146,PinondangSbrng,2019-05-25 13:47:04,Serang Tim Medis dan Demonstran Polri Dilaporkan ke Mahkamah Internasional,,0,Positif,0.9712342023849487
+0,1132281782764756993,Kerja4As,2019-05-25 13:46:28,Mengapa Framing Nomor yang Dipilih,,0,Positif,0.8856354355812073
+0,1132281781321912322,Kerja4As,2019-05-25 13:46:28,Serang Tim Medis dan Demonstran Polri Dilaporkan ke Mahkamah Internasional,,0,Positif,0.9712342023849487
+0,1132277161644048384,ZirmayantoZ,2019-05-25 13:28:06,Marak Penangkapan Fahri Ingatkan Rakyat Bakal Melawan Balik,,0,Positif,0.8138838410377502
+0,1132276952210055169,indoselalu,2019-05-25 13:27:16,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132276950716833792,indoselalu,2019-05-25 13:27:16,Gugat Hasil Pilpres ke MK Sandiaga Persen TPS Provinsi Ada Anomali,,0,Netral,0.6574949026107788
+0,1132276949596999680,indoselalu,2019-05-25 13:27:16,Blokir Sosmed Dinilai KEBIJAKAN DUNGU Kampanye Internet Positif Tapi Sekarang Ramai ramai Pakai VPN,,0,Negatif,0.004229072481393814
+0,1132276947952775168,indoselalu,2019-05-25 13:27:15,Eks Komandan Korps Marinir Pemilu Sekarang Paling Curang,,0,Negatif,0.002944648964330554
+0,1132274411854270465,PinondangSbrng,2019-05-25 13:17:11,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132274410273017856,PinondangSbrng,2019-05-25 13:17:10,Gugat Hasil Pilpres ke MK Sandiaga Persen TPS Provinsi Ada Anomali,,0,Netral,0.6574949026107788
+0,1132274408960217090,PinondangSbrng,2019-05-25 13:17:10,Blokir Sosmed Dinilai KEBIJAKAN DUNGU Kampanye Internet Positif Tapi Sekarang Ramai ramai Pakai VPN,,0,Negatif,0.004229072481393814
+0,1132274406481436674,PinondangSbrng,2019-05-25 13:17:09,Eks Komandan Korps Marinir Pemilu Sekarang Paling Curang,,0,Negatif,0.002944648964330554
+0,1132274147722223616,Kerja4As,2019-05-25 13:16:08,Darah Reyhan,,0,Positif,0.7787084579467773
+0,1132274145952227336,Kerja4As,2019-05-25 13:16:07,Gugat Hasil Pilpres ke MK Sandiaga Persen TPS Provinsi Ada Anomali,,0,Netral,0.6574949026107788
+0,1132274144383516674,Kerja4As,2019-05-25 13:16:07,Blokir Sosmed Dinilai KEBIJAKAN DUNGU Kampanye Internet Positif Tapi Sekarang Ramai ramai Pakai VPN,,0,Negatif,0.004229072481393814
+0,1132274142626177025,Kerja4As,2019-05-25 13:16:06,Eks Komandan Korps Marinir Pemilu Sekarang Paling Curang,,0,Negatif,0.002944648964330554
+0,1132268924215713792,RGP_2019,2019-05-25 12:55:22,Demokrat Ungkap Paradoks Polisi Soal Peluru,,0,Positif,0.7787084579467773

@@ -8,8 +8,10 @@ from pandas import Timestamp
 from datetime import datetime 
 from collections import OrderedDict
 from nltk.tokenize import word_tokenize
-from .fungsi_db import *
 import re
+
+""" Library SENTET """
+from .fungsi_db import *
 
 import pymysql
 pymysql.install_as_MySQLdb() 
@@ -277,7 +279,7 @@ class input_database :
                                 input_sambungan(hasstb, hastg)
             else :
                 pass
-                
+
     ##### PASS
     def cari_tanggal():
         sqltang = "SELECT * FROM `tweet` WHERE `tanggal` >= %s"

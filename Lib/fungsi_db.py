@@ -24,7 +24,6 @@ con = MySQLdb.connect(user="root",passwd="",host="localhost",db="cobasentimentan
 cursor = con.cursor(pymysql.cursors.DictCursor)
 
 def clean_tweet(tweet):   
-    
     def hapus_katadouble(s):
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
         return  pattern.sub(r"\1\1", s)
@@ -44,7 +43,6 @@ def clean_tweet(tweet):
 """
 Fungsi untuk menginputkan data kedalam Database
 """
-
 def input_tweet(sd, a):
     sqli = """
     INSERT INTO `tweet` 

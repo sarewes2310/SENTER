@@ -24,10 +24,12 @@ class CleanTweet:
 
 	def tokenize(self, tweet): 
 		# token = nltk.word_tokenize(tweet)
+		""" Fungsi yang digunakan untuk membagi kalimat menjadi kata"""
 		token = tweet.split(' ')
 		return token
 
 	def kbbi(self, token): 
+		""" Fungsi yang digunakan untuk """
 		global DATA_KBBI
 		#ubah list menjadi dictionary 
 		dic={}

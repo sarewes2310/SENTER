@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/Sarewes2310/SENTET/master/static/asset/Logo/SENTET_2.png?token=AVp8RroIPfI2JxAkhoiin7WnAQvqSRycks5cZA6qwA%3D%3D)
 <br><br>
-SENTET adalah sebuah RESTful API yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. Tweet akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral dengan ekstraksi fitur TF-IDF 
+SENTER adalah sebuah RESTful API yang berguna untuk menganalisa sebuah tweet yang berkaitan dengan pemilu. Tweet akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral dengan ekstraksi fitur TF-IDF 
 # Getting Started
 Buat terlebih dahulu api pada halaman developer twitter https://apps.twitter.com. Registrasi aplikasi yang telah anda buat.
 Setelah berhasil simpan ```Consumer Key```, ```Consumer Secret```, ```Api Key ```, dan ```Api Secret Key``` yang didapat tab Apps.

@@ -34,7 +34,7 @@ class TFIDF:
 			norm='l2',
 			min_df=0,
 			#stop_words='data/stopword.txt', :: coba == fail
-			max_features=1000,
+			max_features=300,
 			use_idf=True, 
 			smooth_idf=False, 
 			sublinear_tf=True, 
@@ -60,7 +60,6 @@ class TFIDF:
 	"""
 	def getData(self):
 		return self.all_data
-
 
 	"""
 	Fungsi yang digunakan hanya untuk mengambil data sentiment training

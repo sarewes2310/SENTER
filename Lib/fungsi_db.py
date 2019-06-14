@@ -48,38 +48,32 @@ def input_tweet(sd, a):
     INSERT INTO `tweet` 
     (`idJsonT`, `tweet`, `tanggal`, `Username`, `RT`, `SA`) 
     VALUES (%s, %s, %s, %s, %s, %s);"""
-                            
     cursor.execute(sqli,(
-
-    sd.iloc[a,0], #ID tweet
-    sd.iloc[a,3], #tweet
-    sd.iloc[a,2], #Date
-    sd.iloc[a,1], #User
-    sd.iloc[a,5], #Retweet Count
-    sd.iloc[a,6]))#SA "pos, net, neg"
-
+        sd.iloc[a,0], #ID tweet
+        sd.iloc[a,3], #tweet
+        sd.iloc[a,2], #Date
+        sd.iloc[a,1], #User
+        sd.iloc[a,5], #Retweet Count
+        sd.iloc[a,6]) #SA "pos, net, neg"
+    )
     con.commit()
-    
-    
 
 def input_retweet(sdr, a, hasrtj):
     sqli = """
     INSERT INTO `retweet` 
     (`idT`, `idJsonR`, `tanggal`, `Username`, `retweet`, `RT`, `SA`) 
     VALUES (%s, %s, %s, %s, %s, %s, %s);"""
-
     #print(i['idT'])
     #a = i['idT']
     cursor.execute(sqli,(
-
-    hasrtj[0]['idT'],  #idT
-    sdr.iloc[a,1],  #IDRetweet 
-    sdr.iloc[a,3], #Tanggal
-    sdr.iloc[a,2], #Username
-    sdr.iloc[a,4], #Retweet
-    sdr.iloc[a,6], #RT
-    sdr.iloc[a,7]))#SA "pos, net, neg
-
+        hasrtj[0]['idT'],  #idT
+        sdr.iloc[a,1],  #IDRetweet 
+        sdr.iloc[a,3], #Tanggal
+        sdr.iloc[a,2], #Username
+        sdr.iloc[a,4], #Retweet
+        sdr.iloc[a,6], #RT
+        sdr.iloc[a,7]) #SA "pos, net, neg
+    )
     con.commit()
 
 def input_rt_t(sdr, a):
@@ -90,13 +84,13 @@ def input_rt_t(sdr, a):
     """
     #print(sdr.iloc[a,0]['id'])
     cursor.execute(sqli,(
-    str(sdr.iloc[a,0]['id']), #ID tweet
-    clean_tweet((sdr.iloc[a,0])['full_text']), #tweet
-    sdr.iloc[a,0]['created_at'], #Date
-    sdr.iloc[a,0]['user']['screen_name'], #User
-    sdr.iloc[a,0]['retweet_count'], #Retweet Count
-    sdr.iloc[a,7]))#SA "pos, net, neg"
-
+        str(sdr.iloc[a,0]['id']), #ID tweet
+        clean_tweet((sdr.iloc[a,0])['full_text']), #tweet
+        sdr.iloc[a,0]['created_at'], #Date
+        sdr.iloc[a,0]['user']['screen_name'], #User
+        sdr.iloc[a,0]['retweet_count'], #Retweet Count
+        sdr.iloc[a,7]) #SA "pos, net, neg"
+    )
     con.commit()
         
 def input_sambungan(hs, hast): #(IDtweet, IDhashtag)

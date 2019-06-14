@@ -1,33 +1,23 @@
 from flask import Flask,render_template,url_for,Markup
-#import sqlalchemy
 import json
 import pandas as pd
 import networkx as nx
 import matplotlib.cm as cmm
 import matplotlib.pyplot as plt
-from Lib.SENTET import NLP 
 from flask import request
 from pandas import Timestamp
 import numpy as np
 from datetime import date, datetime
-
-""" Library SENTET """
-from Lib.TwitterConfig import *
-from Lib.create_db import input_database as ID
-from Lib.GrafGenerator import Grap_Generate as gg
-
 import pymysql
 pymysql.install_as_MySQLdb() 
 import MySQLdb
 
-pymysql.converters.encoders[Timestamp] = pymysql.converters.escape_datetime
-pymysql.converters.encoders[np.float64] = pymysql.converters.escape_float
-pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
-pymysql.converters.conversions = pymysql.converters.encoders.copy()
-pymysql.converters.conversions.update(pymysql.converters.decoders)
+""" Library SENTET """
+from SENTET import SENTET as sentet
 
-con = MySQLdb.connect(user="root",passwd="",host="127.0.0.1",db="sentiment_analysis_twitter")
-cursor = con.cursor(pymysql.cursors.DictCursor)
+"""
+Variabel setting browser
+"""
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config["CACHE_TYPE"] = "Null" 
@@ -54,70 +44,44 @@ list_js = [
 ]
 
 """
-Fungsi yang digunakan untuk merubah JSON
+ Class Utility Web
 """
-def json_serial(obj):
-    """JSON serializer for objects not serializable by default json code"""
-    if isinstance(obj, (datetime, date)):
-        return obj.isoformat()
-    raise TypeError ("Type %s not serializable" % type(obj))
+class utility_web:
+    def connect_database(self):
+        pymysql.converters.encoders[Timestamp] = pymysql.converters.escape_datetime
+        pymysql.converters.encoders[np.float64] = pymysql.converters.escape_float
+        pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
+        pymysql.converters.conversions = pymysql.converters.encoders.copy()
+        pymysql.converters.conversions.update(pymysql.converters.decoders)
 
-"""
-Call library Utama SENTET
-"""
-def SENTET(cari):
-    twitter = login()
-    global NLP
-    NLP = NLP()
-    dataaccum = NLP.MineData(twitter, cari ,2)
-    #print(dataaccum)
-    dp = NLP.ProsesStoreData(dataaccum)
-    df = NLP.ProcessSentiment(dataaccum)
-    dfs = NLP.ProcessHashtags(dataaccum)
-    dft = NLP.ProcessTimestamp(dataaccum)
-    #print("===================================================================== \n")
-    
-    """
-    Proses Memasukan Data ke dalam Database sql
-    """
-    ID.masuk_tweet(dp[1]) #tabel tweet
-    ID.masuk_retweet(dp[0]) #tabel retweet
-    ID.sambungan(dp[1]) #tabel_cari
-    #Export Grap dari Class Grap_Generate
-    gg.Word(dp)
-    return(dp)
+        con = MySQLdb.connect(user="root",passwd="",host="127.0.0.1",db="sentiment_analysis_twitter")
+        cursor = con.cursor(pymysql.cursors.DictCursor)
 
-def getDB(cari):
-    sql = " SELECT tweet.Username, tweet.tanggal, tweet.tweet, tweet.SA FROM tweet \
-            LEFT JOIN tabel_cari ON tabel_cari.idT = tweet.idT \
-            LEFT JOIN hashtag ON hashtag.idH = tabel_cari.idH \
-            WHERE hashtag.isi = %s;" #hashtag.isi = %s (nama hashtag)
-    cursor.execute(sql,cari)
-        
+    def json_serial(self,obj):
+        """JSON serializer for objects not serializable by default json code"""
+        if isinstance(obj, (datetime, date)):
+            return obj.isoformat()
+        raise TypeError ("Type %s not serializable" % type(obj))
+
+    def getDB(self,cari):
+        sql = " SELECT tweet.Username, tweet.tanggal, tweet.tweet, tweet.SA FROM tweet \
+                LEFT JOIN tabel_cari ON tabel_cari.idT = tweet.idT \
+                LEFT JOIN hashtag ON hashtag.idH = tabel_cari.idH \
+                WHERE hashtag.isi = %s;" #hashtag.isi = %s (nama hashtag)
+        cursor.execute(sql,cari)
+
+# Call utility_web
+utility_web = utility_web()
+
 """
 Halaman Home Page
 """
-@app.route("/", methods=['GET','POST'])
+@app.route("/", methods=['GET'])
 @app.route("/home")
 def home():
     #dump(render_template("home.html"))
     #print(url_for('static', filename='ujicoba.css'))
     return render_template("component/body/home.html",list_css = list_css,list_js = list_js)
-
-"""
-Endpoint Search
-"""
-@app.route("/search",methods=['GET','POST'])
-def index():
-    if request.method == 'POST':
-        cari = request.form['search']
-        dp = SENTET(cari)
-        dpa = dp[2]   
-        getDB(cari)
-        hitung_tweet = len(dpa)
-        #return redirect(url_for("component/body/hasil.html",list_css = list_css,list_js = list_js))
-        return render_template("component/body/hasil.html",list_css = list_css,list_js = list_js, hitung_tweet = hitung_tweet, cari = cari)
-    return cari
 
 """
 Halaman About
@@ -133,23 +97,40 @@ def getApi():
     #print(hs)
     return json.dumps(hs, default=json_serial)
                
-
-def prosesApiDate():
-    pass
-
 @app.route("/ujicoba")
 def uji():
     return json.dumps(Markup.escape(render_template("ujicoba.html")))
     #return json.dumps(posts)
 
 """
+Endpoint Search
+"""
+@app.route("/search",methods=['GET','POST'])
+def search():
+    utility_web.connect_database()
+    if request.method == 'POST':
+        cari = request.form['search']
+        #sentet = SENTET()
+        key = sentet.login_twitter() #format dari fungsi parameter CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,ACCESS_SECRET
+        dp = sentet.pencarian(cari, key) #fungsi yang digunakan untuk mining tweet dari twitter
+        dpa = dp[2]   
+        #getDB(cari)
+        hitung_tweet = len(dpa)
+        return render_template("component/body/hasil.html",list_css = list_css,list_js = list_js, hitung_tweet = hitung_tweet, cari = cari)
+    return cari
+
+"""
 Endpoint network node
 """
-@app.route("/ujiTampilan/json")
-def ujiTampilanJson():
+@app.route("/api/<int:version>/network")
+def api_network(version):
     df = pd.read_csv('Lib/export/total.csv')
     #print(df)
     hasil = []
+    """
+    Bentuk data
+    hasil = ['pondokpinang','pasfriend','dll']
+    """
     for i in df.loc[:,'Hashtags']:
         if pd.isnull(i) is False:
             for j in str(i).split(" "):
@@ -174,19 +155,6 @@ def ujiTampilanJson():
                                 else:
                                     link.append({"source" : edge.index(j.lower()), "target": edge.index(k.lower()), "weight" : 1})
 
-    #print(link)
-    """
-    link_new = []
-    for i in link:
-        if len(link_new) == 0:
-            link_new.append(i)
-        else:
-            for j in link_new:
-                if i['source'] != j['source'] and i['target'] != j['target']:
-                    link_new.append(i)
-    
-    print(link_new)
-    """
     hasil = []
     for i in edge:
         hasil.append({"name":i,"group":1})
@@ -200,8 +168,8 @@ def ujiTampilanJson():
 """
 Endpoint chart analys sentiment
 """
-@app.route("/ujiChart/json")
-def ujiChartJSON():
+@app.route("/api/<int:version>/chart")
+def api_chart(version):
     df = pd.read_csv('Lib/export/total.csv')
     #print(df)
     hasil = []
@@ -225,6 +193,13 @@ def ujiChartJSON():
     print(hasil)
     return json.dumps(hasil)
     
+
+"""
+Endpoint worldcloud
+"""
+@app.route("/api/<int:version>/chart")
+def get_world_cloud():
+    print("WORLD_CLOUD_RUN")
 
 if __name__ == '__main__':
     app.run(debug=True)

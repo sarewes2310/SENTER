@@ -53,7 +53,7 @@ class Analiser:
 				self.ydata.append([int(temp[1])])
 		self.tfidf_data = TFIDF([self.xdata, self.ydata])
 		print("PROCESS TFIDF")
-		print(self.tfidf_data)
+		#print(self.tfidf_data)
 		#self.save_model(self.tfidf_data, filename = 'tfidf_v1')
 
 	def save_model(self, model, filename='model'):
@@ -114,7 +114,10 @@ class Analiser:
 		# - -  layer 3 	: 5 (activated  tanh)
 		# - - output layer 	: 1 (activated sigmoid)
 		input_data_dimension = len(X[0])
-		input_data_dimension = 300 if input_data_dimension > 300 else input_data_dimension
+		print("INPUT DATA DIMENSION",input_data_dimension)
+		#input_data_dimension = 300 if input_data_dimension > 300 else input_data_dimension
+		if input_data_dimension > 300:
+			input_data_dimension = 300
 
 		model.add(Dense(units=int(0.34 * input_data_dimension), activation='tanh', input_dim=input_data_dimension))
 		model.add(Dense(units=5, activation='tanh'))

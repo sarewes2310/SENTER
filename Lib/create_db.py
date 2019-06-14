@@ -11,7 +11,9 @@ from nltk.tokenize import word_tokenize
 import re
 
 """ Library SENTET """
-from .fungsi_db import *
+#from .fungsi_db import *
+from .cleantweet import CleanTweet #cuma import fungsi clean_tweet()
+from .analiser import Analiser
 
 import pymysql
 pymysql.install_as_MySQLdb() 
@@ -37,250 +39,215 @@ Proses peng-inputan ke database melalui beberapa iterasi 'SELECT',
 untuk mencegah redudansi data.
 
 """
-class input_database :
+class input_database:
+    CT = CleanTweet()
+
+    def search_tweet(id_t):
+        sqlt = """
+        SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
+        """
+        cursor.execute(sqlt, id_t)
+        hasilt = cursor.fetchall()
+        return hasilt
+
+    def search_hashtag(id_h):
+        sqlh = """
+        SELECT `idH` FROM `hashtag` WHERE `isi` = %s;
+        """            
+        cursor.execute(sqlh, i)
+        hast = cursor.fetchall()
+        return hast
+
+    def search_retweet(id_rt):
+        sqlt = """
+        SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
+        """
+        print(sdr.iloc[a,1])
+        cursor.execute(sqlt, sdr.iloc[a,1])
+        hasilt = cursor.fetchall()
+        print("hasil retweet sama = ", len(hasilt))
+
+    def input_tweet(sd):
+        sqli = """
+        INSERT INTO `tweet` 
+        (`idJsonT`, `tweet`, `tanggal`, `Username`, `RT`, `SA`) 
+        VALUES (%s, %s, %s, %s, %s, %s);"""
+        cursor.execute(sqli,(
+            sd[0], #ID tweet
+            sd[1], #tweet
+            sd[2], #Date
+            sd[3], #User
+            sd[4], #Retweet Count
+            sd[5]) #SA "pos, net, neg"
+        )
+        con.commit()
+
+    def input_retweet(sdr):
+        sqli = """
+        INSERT INTO `retweet` 
+        (`idT`, `idJsonR`, `tanggal`, `Username`, `retweet`, `RT`, `SA`) 
+        VALUES (%s, %s, %s, %s, %s, %s, %s);"""
+        #print(i['idT'])
+        #a = i['idT']
+        cursor.execute(sqli,(
+            sdr[0],  #idT
+            sdr[1],  #IDRetweet 
+            sdr[2], #Tanggal
+            sdr[3], #Username
+            sdr[4], #Retweet
+            sdr[5], #RT
+            sdr[6]) #SA "pos, net, neg
+        )
+        con.commit()
+
+    def input_hashtag(sdh):
+        sql = """
+        INSERT INTO `hashtag` (`isi`) VALUES (%s)
+        """ 
+        cursor.execute(sql, sdh)
+        hasts = cursor.fetchall()
+        con.commit()
+        return hasts
+
+    def input_rt_t(sdr, a):
+        sqli = """
+        INSERT INTO `tweet` 
+        (`idJsonT`, `tweet`, `tanggal`, `Username`, `RT`, `SA`)
+        VALUES (%s, %s, %s, %s, %s, %s)
+        """
+        #print(sdr.iloc[a,0]['id'])
+        cursor.execute(sqli,(
+            str(sdr.iloc[a,0]['id']), #ID tweet
+            CT.clean_text_tweet((sdr.iloc[a,0])['full_text']), #tweet
+            sdr.iloc[a,0]['created_at'], #Date
+            sdr.iloc[a,0]['user']['screen_name'], #User
+            sdr.iloc[a,0]['retweet_count'], #Retweet Count
+            sdr.iloc[a,7]) #SA "pos, net, neg"
+        )
+        con.commit()
+            
+    def input_trigger(hs, hast): #(IDtweet, IDhashtag)
+        sqli = """
+        INSERT INTO `tag_trigger` 
+        (`idT`, `idH`)
+        VALUES (%s, %s)
+        """
+        cursor.execute(sqli, (
+        hs[0]['idT'], # ID twitter 
+        hast[0]['idH'])) #ID Hashtag    
+        return con.commit()
+
+    ##### TESTING #####
     def masuk_tweet(StoreData):
         sd = StoreData  
         for a in range(0,len(sd)-1):
-            sqlt = """
-            SELECT `idT` FROM `tweet` WHERE `tweet` = %s
-            """
-            cursor.execute(sqlt, sd.iloc[a,3])
-            hasilt = cursor.fetchall()
-            print("hasil tweet sama = ", len(hasilt))
-            if len(hasilt) > 0:
-                pass
-            else:
-                input_tweet(sd, a)
-            x = sd.iloc[a,4].split(" ") #displit
-            if len(x) > 2: #dicheck apabila jumlah isi > 2
-                for i in x:
-                    if i is not '': #dicheck sisa pembagian dari split  
-                        sqlh = """
-                        SELECT `idH` FROM `hashtag` WHERE `isi` = %s;
-                        """            
-                        cursor.execute(sqlh, i)
-                        hast = cursor.fetchall()
-                        print("hast sama = ", len(hast))
-                        if len(hast) > 0: # jika data > 0
-                            #for e in sd.iloc[a,3]: #tweet
-                            sqlhs = """
-                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
-                            """
-                            cursor.execute(sqlhs, sd.iloc[a,0]) #check idT 
-                            hs = cursor.fetchall()
-                            print("tweet sama = ", len(hs)) 
-                        else :     
-                            sqlhas = """
-                            INSERT INTO `hashtag` (`isi`) VALUES (%s)
-                            """ 
-                            cursor.execute(sqlhas, i)
-                            hasts = cursor.fetchall()
-                            con.commit()
-                                
-                            sqlin = """
-                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
-                            """
-                            cursor.execute(sqlin, sd.iloc[a,0])
-                            hstgl = cursor.fetchall()
-                            #print(len(hstgl))
+            #sqlt = """
+            #SELECT `idT` FROM `tweet` WHERE `tweet` = %s
+            #"""
+            #cursor.execute(sqlt, sd.iloc[a,3])
+            #hasilt = cursor.fetchall()
+            #print("hasil tweet sama = ", len(hasilt))
+            hasilt = self.search_tweet(sd.iloc[a,1])
+            if len(hasilt) == 0:
+                data_tweet = [sd.iloc[a,0],sd.iloc[a,3],sd.iloc[a,2],sd.iloc[a,1],sd.iloc[a,5],sd.iloc[a,6]]
+                self.input_tweet(data_tweet) ##TO DO : - Input Tweet;
+                x = sd.iloc[a,4].split(" ") #displit
+                if len(x) > 2: #dicheck apabila jumlah isi > 2
+                    for i in x:
+                        if i is not '': #dicheck sisa pembagian dari split  
+                            #sqlh = """
+                            #SELECT `idH` FROM `hashtag` WHERE `isi` = %s;
+                            #"""            
+                            #cursor.execute(sqlh, i)
+                            #hast = cursor.fetchall()
+                            #print("hast sama = ", len(hast))
+                            hast = self.search_hashtag(i)
+                            if len(hast) == 0: # jika data > 0
+                                #sqlhas = """
+                                #INSERT INTO `hashtag` (`isi`) VALUES (%s)
+                                #""" 
+                                #cursor.execute(sqlhas, i)
+                                #hasts = cursor.fetchall()
+                                #con.commit()
+                                self.input_hashtag(i)
+                                hast = self.search_hashtag(i)
+                                #sqlin = """
+                                #SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
+                                #"""
+                                #cursor.execute(sqlin, sd.iloc[a,0])
+                                #hstgl = cursor.fetchall()
+                                #print(len(hstgl))
+                            return self.input_trigger(hasilt[0]['idT'],hast[0]['idH']) ##TO DO : - Insert Tag Trigger;
+        return 0
 
-                            if len(hstgl) > 0: #bila ada
-                                pass 
-                            else :
-                                input_tweet(sd, a)
-                            #print(has) = ()
-            else :
-                pass
-    ##### PASS
-
+    ##### TESTING #####
     def masuk_retweet(StoreData):
         sdr = StoreData
         #print(sdr)
         for a in range(0,len(sdr)-1):
-            sqlt = """
-            SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
-            """
-            print(sdr.iloc[a,1])
-            cursor.execute(sqlt, sdr.iloc[a,1])
-            hasilt = cursor.fetchall()
-            print("hasil retweet sama = ", len(hasilt))
-            if len(hasilt) > 0:    
-                pass
-            else: 
+            #sqlt = """
+            #SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
+            #"""
+            #print(sdr.iloc[a,1])
+            #cursor.execute(sqlt, sdr.iloc[a,1])
+            #hasilt = cursor.fetchall()
+            #print("hasil retweet sama = ", len(hasilt))
+            hasilt = self.search_retweet()
+            ##TO DO : - Check Retweet;
+            if len(hasilt) == 0:    
                 #input_retweet(sdr, a, hasilt) 
-                sqlcari = """
-                SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s; 
-                """ 
-                cursor.execute(sqlcari, sdr.iloc[a,0]['id_str'])
-                hascari = cursor.fetchall()
+                #sqlcari = """
+                #SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s; 
+                #""" 
+                #cursor.execute(sqlcari, sdr.iloc[a,0]['id_str'])
+                #hascari = cursor.fetchall()
+                hascari = self.search_tweet(sdr.iloc[a,0]['id_str'])
+                ##TO DO : - Check Tweet;
                 if len(hascari) > 0:
-                    sqltc = """
-                    SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
-                    """
-                    cursor.execute(sqltc, sdr.iloc[a,1])
-                    haschk = cursor.fetchall()
-                    if len(haschk) > 0:
-                    #    print(len(haschk))
-                        pass 
-                    else:
-                        ##TO DO : - Check Hashtag;
-                        x = sdr.iloc[a,5].split(" ") #displit
-                        if len(x) > 2: #dicheck apabila jumlah isi > 2
-                            for i in x:
-                                if i is not '': #dicheck sisa pembagian dari split  
-                                    sqlh = """
-                                    SELECT `idH` FROM `hashtag` WHERE `isi` = %s;
-                                    """            
-                                    cursor.execute(sqlh, i)
-                                    hast = cursor.fetchall()
-                                    print("hast sama = ", len(hast))
-                                    if len(hast) > 0: # jika data > 0
-                                        sqlhs = """
-                                        SELECT `idT` FROM `tweet` WHERE `tweet` = %s;
-                                        """
-                                        cursor.execute(sqlhs, sdr.iloc[a,0]['id']) #check idT 
-                                        hsrtb = cursor.fetchall()
-                                        #print("tweet sama = ", len(hsrtb)) 
-                                    else :
-                                        sqlhas = """
-                                        INSERT INTO `hashtag` (`isi`) VALUES (%s)
-                                        """ 
-                                        cursor.execute(sqlhas, i)
-                                        con.commit()
-                                        sqlhs = """
-                                        SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
-                                        """
-                                        cursor.execute(sqlhs, sdr.iloc[a,0]['id']) #check idT 
-                                        hsrtb = cursor.fetchall()
-                                        #print("tweet sama = ", len(hsrtb))
-                                        if len(hsrtb) > 0 :      
-                                            sqlin = """
-                                            SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s
-                                            """
-                                            cursor.execute(sqlin, sdr.iloc[a,1])
-                                            hstglrtb = cursor.fetchall()
-                                            #print(len(hstgl))
-                                            if len(hstglrtb) > 0: #bila ada
-                                                pass 
-                                            else :
-                                                input_retweet(sdr, a, hsrtb)
-                                                con.commit()
-                                        else :
-                                            input_rt_t(sdr, a)
-                                            sqlin = """
-                                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
-                                            """
-                                            cursor.execute(sqlhs, sdr.iloc[a,0]['id'])
-                                            hstglrtbin = cursor.fetchall()
-                                            input_retweet(sdr, a, hstglrtbin)
-                                            con.commit()
-                                        #print(has) = ()
-                                else :
-                                    pass
-                        #input_retweet(sdr, a, hascari)
+                    ##TO DO : - Check Hashtag;
+                    x = sdr.iloc[a,5].split(" ") #displit
+                    if len(x) > 2: #dicheck apabila jumlah isi > 2
+                        for i in x:
+                            if i is not '': #dicheck sisa pembagian dari split  
+                                #sqlh = """
+                                #SELECT `idH` FROM `hashtag` WHERE xisi` = %s;
+                                #"""            
+                                #cursor.execute(sqlh, i)
+                                #hast = cursor.fetchall()
+                                #print("hast sama = ", len(hast))
+                                hast = self.search_hashtag(i)
+                                if len(hast) == 0: # jika data > 0
+                                    self.input_hashtag(i)
+                                    hast = self.search_hashtag(i)
+                                hascari = self.search_tweet(sdr.iloc[a,0]['id_str'])
+                                data_retweet = [hasil_tweet['idT'],sdr.iloc[a,1],sdr.iloc[a,3],sdr.iloc[a,2],
+                                sdr.iloc[a,4],sdr.iloc[a,6],sdr.iloc[a,7]]
+                                self.input_retweet(data_retweet)
+                                self.input_trigger(hascari[0]['idT'],hast[0]['idH'])
+                    #input_retweet(sdr, a, hascari)
                 else:
-                    input_rt_t(sdr,a)
-                    con.commit()
-                    sqlint = """
-                    SELECT `idT` FROM `tweet` WHERE `idJsonT` = '%s'
-                    """
-                    #print(sdr.iloc[a,0])
-                    cursor.execute(sqlint, sdr.iloc[a, 0]['id'])
-                    hasint = cursor.fetchall()
-                    #print("ini retweet ke 2 : ",sdr.iloc[a,0]['id_str']," == ", hasint )
-                    print(hasint)
-                    sqltck = """
-                    SELECT `idR` FROM `retweet` WHERE `idJsonR` = %s; 
-                    """
-                    cursor.execute(sqltck, sdr.iloc[a,1])
-                    cursor.fetchall() 
+                    hast = self.search_hashtag(i)
+                    if len(hast) == 0: # jika data > 0
+                        self.input_hashtag(i)
+                        hast = self.search_hashtag(i)
+                    NLP.an = Analiser(training_data='Lib/data/coba_train.csv')
+                    filename = 'model'
+                    NLP.an.load_model(filename)
+                    value_training = [NLP.an.tfidf_data.transform(sd.iloc[a,0]['text'])]
+                    data_tweet = [sd.iloc[a,0]['id_str'],sd.iloc[a,0]['text'],pd.to_datetime(sd.iloc[a,0]['created_at']),
+                    sd.iloc[a,0]['user']['screen_name'],sd.iloc[a,0]['retweet_count'],NLP.an.testStrFromTrained(value_training)]
+                    self.input_tweet(data_tweet)
+                    data_retweet = [hasil_tweet['idT'],sdr.iloc[a,1],sdr.iloc[a,3],sdr.iloc[a,2],
+                    sdr.iloc[a,4],sdr.iloc[a,6],sdr.iloc[a,7]]
+                    self.input_retweet(data_retweet)
+                    hascari = self.search_tweet(sdr.iloc[a,0]['id_str'])
+                    self.input_trigger(hascari[0]['idT'],hast[0]['idH'])
                     #######
                     # Bug :
                     # See -> https://github.com/PyMySQL/PyMySQL/issues/399
                     #######
-                    haschek = cursor.fetchall()
-                    #print(haschek)
-                    if len(haschek) > 0:
-                        pass 
-                    else:
-                        input_retweet(sdr, a, hasint)
-
-    ##### PASS
-    def sambungan(StoreData):
-        sds = StoreData
-        for a in range(0,len(sds)-1):
-            x = sds.iloc[a,4].split(" ") #displit
-            if len(x) > 2: #dicheck apabila jumlah isi > 2
-                for i in x:
-                    if i is not '': #dicheck sisa pembagian dari split  
-                        sqlh = """
-                        SELECT `idH` FROM `hashtag` WHERE `isi` = %s;
-                        """            
-                        cursor.execute(sqlh, i)
-                        hast = cursor.fetchall()
-                        print("hast sama = ", hast)
-                        #print(x)
-                        if len(hast) > 0: # jika data > 0
-                            sqlhs = """
-                            SELECT `idT` FROM `tweet` WHERE `idJsonT`  = %s;
-                            """
-                            cursor.execute(sqlhs, sds.iloc[a,0]) #check idT 
-                            hs = cursor.fetchall()
-                            print("tweet sama = ", len(hs)) 
-                            if len(hs) > 0:
-                                input_sambungan(hs, hast) #(IDtweet, IDhashtag)
-                                #cursor.fetchall()
-                                con.commit()
-                            else :
-                                input_tweet(sds, a)
-                                con.commit()
-                                sqlinb = """
-                                SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s;
-                                """
-                                #print("========= BUG =========")
-                                #print(sds.iloc[a,0])
-                                cursor.execute(sqlinb, sds.iloc[a,0])
-                                print(cursor.fetchall())
-                                #######
-                                # Bug :
-                                # See -> https://github.com/PyMySQL/PyMySQL/issues/399
-                                # fix : double con.commit()
-                                #######
-                                cursor.execute(sqlinb, sds.iloc[a,0])
-                                hsb = cursor.fetchall()
-                                print(hsb)
-                                input_sambungan(hsb, hast)
-                        else :
-                            sqlhas = """
-                            INSERT INTO `hashtag` (`isi`) VALUES (%s)
-                            """ 
-                            cursor.execute(sqlhas, i)
-                            con.commit()  
-                            sqlin = """
-                            SELECT `idH` FROM `hashtag` WHERE `isi` = %s
-                            """
-                            cursor.execute(sqlin, i)
-                            hastg = cursor.fetchall()
-                            #print(len(hstgl))
-                            sqlst = """
-                            SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
-                            """
-                            cursor.execute(sqlst, sds.iloc[a,0])
-                            hasst = cursor.fetchall()
-                            if len(hasst) > 0:
-                                input_sambungan(hasst, hastg)
-                            else:
-                                input_tweet(sds, a)
-                                sqlsl = """
-                                SELECT `idT` FROM `tweet` WHERE `idJsonT` = %s
-                                """
-                                cursor.execute(sqlst, sds.iloc[a,0])
-                                hasstb = cursor.fetchall()
-                                input_sambungan(hasstb, hastg)
-            else :
-                pass
-
-    ##### PASS
+        return 0
+    
     def cari_tanggal():
         sqltang = "SELECT * FROM `tweet` WHERE `tanggal` >= %s"
         ms = input("YYYY-MM-DD : ")
@@ -290,4 +257,4 @@ class input_database :
 
     def close_cursor():    
         cursor.close()
-        con.close()
+        con.close() 

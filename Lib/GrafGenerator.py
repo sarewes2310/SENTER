@@ -20,9 +20,7 @@ dan Node
 class Grap_Generate:
         
     def PieChart(StoreData):
-          
         pos_tweet = StoreData['SA'].value_counts()
-
         colors = ['yellowgreen','gray','lightcoral']
         pos_tweet.plot.pie(
                 shadow=False,
@@ -38,25 +36,18 @@ class Grap_Generate:
         plt.gcf().clear()
 
     def Graf(SentimentData, HashtagData, TimestampData):
-
         df = SentimentData
-
         df = df.astype({'Polarity': 'float64'})
-
         SentimentbyDate = df.groupby([df['Date'].dt.date, 
                                 df['Date'].dt.hour, 
                                 df['Date'].dt.minute])['Polarity'].mean()
         df = TimestampData
-
         TwittbyDate = df.groupby([df['Date'].dt.date, 
                                 df['Date'].dt.hour, 
                                 df['Date'].dt.minute]).size()
         df = HashtagData
-        
         hashtagCountData = df['HT'].value_counts()
-
         x = np.arange(TwittbyDate.size)
-
         fit = np.polyfit(x, TwittbyDate, 1)
         fit_fn = np.poly1d(fit)
         #Plot data
@@ -64,16 +55,13 @@ class Grap_Generate:
         plt.plot(x, fit_fn(x), 'r-')
         plt.plot(x, TwittbyDate, 'g-', ms=4)
         plt.xticks(rotation=90)
-
         plt.xlabel('Tanggal, Jam, Menit')
         plt.ylabel('Twitter disebut per menit')
         plt.legend(["NLP Sentiment Polarity antara 0 to 1",
                     "Liner regression untuk rata - rata di mention"])
         #plt.title("Query text: ")
-
         ax2=plt.twinx()
         ax2.set_ylim(0,1)
-
         ColorMap = SentimentbyDate > 0
         SentimentbyDate.plot.bar(color=ColorMap.map({True: 'b', False: 'r'}),ax=ax2 )
 

@@ -7,7 +7,8 @@ from pandas import Timestamp
 import numpy as np
 from datetime import date, datetime
 from twython import Twython
-from Lib.create_db import input_database as ID
+from Lib.create_db import input_database 
+#import Lib.create_db
 from Lib.GrafGenerator import Grap_Generate as gg
 
 class SENTET:
@@ -30,6 +31,7 @@ class SENTET:
         """
         Proses Memasukan Data ke dalam Database sql
         """
+        ID = input_database()
         ID.masuk_tweet(dp[1]) #tabel tweet
         ID.masuk_retweet(dp[0]) #tabel retweet
         #ID.sambungan(dp[1]) #tabel_cari

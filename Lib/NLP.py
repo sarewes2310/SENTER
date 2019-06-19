@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 
 """ Library SENTET """
 from .analiser import Analiser
-from .TwitterConfig import *
+#from .TwitterConfig import *
 from .cleantweet import CleanTweet #cuma import fungsi clean_tweet()
 
 class NLP:

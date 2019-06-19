@@ -47,7 +47,7 @@ list_js = [
  Class Utility Web
 """
 class utility_web:
-    def connect_database(self):
+    def connect_database():
         pymysql.converters.encoders[Timestamp] = pymysql.converters.escape_datetime
         pymysql.converters.encoders[np.float64] = pymysql.converters.escape_float
         pymysql.converters.encoders[np.int64] = pymysql.converters._escape_table
@@ -57,21 +57,18 @@ class utility_web:
         con = MySQLdb.connect(user="root",passwd="",host="127.0.0.1",db="sentiment_analysis_twitter")
         cursor = con.cursor(pymysql.cursors.DictCursor)
 
-    def json_serial(self,obj):
+    def json_serial(obj):
         """JSON serializer for objects not serializable by default json code"""
         if isinstance(obj, (datetime, date)):
             return obj.isoformat()
         raise TypeError ("Type %s not serializable" % type(obj))
 
-    def getDB(self,cari):
+    def getDB(cari):
         sql = " SELECT tweet.Username, tweet.tanggal, tweet.tweet, tweet.SA FROM tweet \
                 LEFT JOIN tabel_cari ON tabel_cari.idT = tweet.idT \
                 LEFT JOIN hashtag ON hashtag.idH = tabel_cari.idH \
                 WHERE hashtag.isi = %s;" #hashtag.isi = %s (nama hashtag)
         cursor.execute(sql,cari)
-
-# Call utility_web
-utility_web = utility_web()
 
 """
 Halaman Home Page
@@ -90,6 +87,19 @@ Halaman About
 def about():
     return render_template("about.html")
 
+"""
+Halaman Documentation
+"""
+@app.route("/docs")
+def docs():
+    return render_template("about.html")
+
+"""
+Halaman Tutorial
+"""
+@app.route("/tutorial")
+def tutorial():
+    return render_template("about.html")
 
 @app.route("/getApiAll")
 def getApi():
@@ -201,5 +211,11 @@ Endpoint worldcloud
 def get_world_cloud():
     print("WORLD_CLOUD_RUN")
 
+
+
+
+"""
+Main Program
+"""
 if __name__ == '__main__':
     app.run(debug=True)

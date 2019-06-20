@@ -112,12 +112,12 @@ def uji():
     return json.dumps(Markup.escape(render_template("ujicoba.html")))
     #return json.dumps(posts)
 
+
 """
 Endpoint Search
 """
-@app.route("/search",methods=['GET','POST'])
+@app.route("/search",methods=['POST'])
 def search():
-    utility_web.connect_database()
     if request.method == 'POST':
         cari = request.form['search']
         #sentet = SENTET()
@@ -129,10 +129,11 @@ def search():
         return render_template("component/body/hasil.html",list_css = list_css,list_js = list_js, hitung_tweet = hitung_tweet, cari = cari)
     return cari
 
+
 """
 Endpoint network node
 """
-@app.route("/api/<int:version>/network")
+@app.route("/api/<int:version>/network_all")
 def api_network(version):
     df = pd.read_csv('Lib/export/total.csv')
     #print(df)
@@ -175,19 +176,20 @@ def api_network(version):
     }
     return json.dumps(edge)
 
+
 """
-Endpoint chart analys sentiment
+Endpoint chart analys sentiment all
 """
-@app.route("/api/<int:version>/chart")
+@app.route("/api/<int:version>/chart_all")
 def api_chart(version):
-    df = pd.read_csv('Lib/export/total.csv')
+    df = sentet.chart_analysis_generate()
     #print(df)
     hasil = []
     a = 0
     b = 0
     c = 0 
     #print(df.loc[:,'SA'])
-    for i in df.loc[:,'SA']:
+    for i in df:
         #print(i)
         if i == "Positif":
             a = a + 1
@@ -202,17 +204,61 @@ def api_chart(version):
     }
     print(hasil)
     return json.dumps(hasil)
+
+
+"""
+Endpoint chart analys sentiment DATE
+"""
+@app.route("/api/<int:version>/chart_date")
+def api_chart_date(version):
+    if request.method == 'POST':
+        cari[0] = request.form['date_from']
+        cari[1] = request.form['date_to']
+        df = sentet.chart_analysis_generate_by_date(cari)
+        #print(df)
+        hasil = []
+        a = 0
+        b = 0
+        c = 0 
+        #print(df.loc[:,'SA'])
+        for i in df:
+            #print(i)
+            if i == "Positif":
+                a = a + 1
+            elif i == "Negatif":
+                b = b + 1
+            elif i == "Netral":
+                c += 1
+        hasil = {
+            "P"     : a,
+            "N"     : b,
+            "L"     : c,
+            "from"  : cari[0],
+            "to"    : cari[1]
+        }
+        print(hasil)
+        return json.dumps(hasil)
     
 
 """
-Endpoint worldcloud
+Endpoint worldcloud ALL
 """
-@app.route("/api/<int:version>/chart")
-def get_world_cloud():
-    print("WORLD_CLOUD_RUN")
+@app.route("/api/<int:version>/wordcloud_all",methods=['GET'])
+def api_world_cloud_all(version):
+    if request.method == 'GET':
+        return json.dumps(sentet.word_cloud_generate())
 
-
-
+"""
+Endpoint worldcloud ALL
+"""
+@app.route("/api/<int:version>/wordcloud_date",methods=['POST'])
+def api_world_cloud_all_date(version):
+    if request.method == 'POST':
+        cari[0] = request.form['date_from']
+        cari[1] = request.form['date_to']
+        return json.dumps(sentet.word_cloud_generate_by_date(cari))
+    else:
+        return "Generate ERROR!!"
 
 """
 Main Program

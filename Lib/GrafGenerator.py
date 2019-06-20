@@ -7,6 +7,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import networkx as nx
 import numpy as np
+from datetime import datetime
 
 """
 Class Grap_Generate berfungsi untuk meng-export 
@@ -81,8 +82,8 @@ class Grap_Generate:
         plt.gcf().clear()
 
     def Word(StoreData):
-        dp = StoreData[2]
-        text = " ".join(txt for txt in dp['Tweet'])
+        dp = StoreData
+        text = " ".join(txt for txt in dp)
         stopwords = set(STOPWORDS)
         custom = open('Lib/data/stopword.txt', 'r', encoding='utf-8').readlines()
         stopwords.update(custom)
@@ -92,17 +93,18 @@ class Grap_Generate:
         plt.axis("off")
         #plt.show()
         #wordcloud.to_file("Lib/export/test_graph_wordclloud.png")
-        #tampil web 
-        wordcloud.to_file("static/asset/wordcloud/WordCloud.png")
+        #tampil web
+        now = datetime.now() 
+        filename = 'static/asset/wordcloud/WordCloud_1.png'
+        wordcloud.to_file(filename)
         print("WordCloud telah diexport")
         plt.gcf().clear()
+        return filename
 
     def Node(StoreData):
-
         G = nx.Graph()
         G.clear()
         dp = StoreData
-
         hashtags = []
         for hash_list in dp.values[:,4]:
             hashtags.extend(hash_list[2:-2].split('; '))
@@ -110,7 +112,6 @@ class Grap_Generate:
         hashtags = list(OrderedDict.fromkeys(hashtags))
         for hashtag in hashtags:
             G.add_node(hashtag.lower(), name=hashtag.lower())
-
         edges = []
         for hash_list in dp.values[:,4]:
             hash_list = hash_list[2:-2].split('; ')
@@ -120,12 +121,9 @@ class Grap_Generate:
                         edges.append([hash_list[i].lower(), hash_list[j].lower()])
         for edge in edges:
             G.add_edge(edge[0], edge[1])
-
         G.remove_nodes_from([d[0] for d in G.degree if d[1] <= 10 ])
-
         nx.draw(G, node_size=1600, cmap=plt.cm.Reds,
                 node_color=range(len(G)), pos=nx.random_layout(G), with_labels=True)
-
         plt.savefig("export/node.png", format='PNG')
         nx.write_gexf(G, "node-hashtag.gexf")
         print("Node Telah Diexport")

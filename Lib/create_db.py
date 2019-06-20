@@ -41,6 +41,55 @@ untuk mencegah redudansi data.
 """
 class input_database:
     CT = CleanTweet()
+    ##### DONE #####
+    def select_network(self, cari):
+        print("hds")
+        sqln = """
+        SELECT * FROM `tag_trigger` INNER JOIN `hashtag` ON `tag_trigger.idH` = `hashtag.idH` INNER JOIN `tweet` ON `tag_trigger.idT` = `tweet.idT` 
+        """
+        cursor.execute(sqln)
+        hasiln = cursor.fetchall()        
+        return hasiln
+
+    ##### DONE #####
+    def select_tweet(self):
+        print("hds")
+        sqlt = """
+        SELECT * FROM `tweet`
+        """
+        cursor.execute(sqlt)
+        hasilt = cursor.fetchall()        
+        return hasilt
+
+    ##### DONE #####
+    def select_retweet(self):
+        print("hds")
+        sqlrt = """
+        SELECT * FROM `retweet`
+        """
+        cursor.execute(sqlrt)
+        hasilrt = cursor.fetchall()        
+        return hasilrt
+
+    ##### DONE #####
+    def select_tweet_date(self,cari_from,cari_to):
+        print("hds")
+        sqlt = """
+        SELECT * FROM `tweet` WHERE `tanggal` >= %s AND `tanggal` <= %s
+        """
+        cursor.execute(sqlt,(cari_from,cari_to))
+        hasilt = cursor.fetchall()        
+        return hasilt
+
+    ##### DONE #####
+    def select_retweet_date(self,cari_from,cari_to):
+        print("hds")
+        sqlrt = """
+        SELECT * FROM `retweet` WHERE `tanggal` >= %s AND `tanggal` <= %s
+        """
+        cursor.execute(sqlrt,(cari_from,cari_to))
+        hasilrt = cursor.fetchall()        
+        return hasilrt
 
     ##### DONE #####
     def search_tweet(self,id_t):

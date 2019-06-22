@@ -92,7 +92,7 @@ class SENTET:
             "length":[len(hasil),len(link)]
         }
         """
-    ### TESTING ###
+    ### DONE ###
     def word_cloud_generate():
         ID = input_database()
         tweet = ID.select_tweet()
@@ -124,7 +124,7 @@ class SENTET:
         }
         return data
 
-    ### TESTING ###
+    ### DONE ###
     def chart_analysis_generate():
         ID = input_database()
         hasil = []
@@ -146,4 +146,10 @@ class SENTET:
             hasil.append(i['SA'])
         for j in retweet:
             hasil.append(j['SA'])
+        return hasil
+
+    ### TESTING ###
+    def hot_hashtag_all(cari):
+        ID =  input_database()
+        hasil = []
         return hasil

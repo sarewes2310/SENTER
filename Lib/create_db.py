@@ -41,6 +41,24 @@ untuk mencegah redudansi data.
 """
 class input_database:
     CT = CleanTweet()
+    ##### TESTING #####
+    def select_hashtag_all(self):
+        sqlh = """
+        SELECT `isi` FROM hashtag
+        """
+        cursor.execute(sqlh)
+        hasilh = cursor.fetchall()
+        return hasilh
+
+    ##### TESTING #####
+    def select_hashtag_date(self, cari):
+        sqlh = """
+        SELECT `isi` FROM `hashtag` INNER JOIN `tag_trigger` ON `tag_trigger.idH` = `hashtag.idH` INNER JOIN `tweet` ON `tag_trigger.idT` = `tweet.idT` BETWEEN `tweet.tanggal` = %s AND `tweet.tanggal` = %s 
+        """
+        cursor.execute(sqlh,(cari['from'], cari['to']))
+        hasilh = cursor.fetchall()
+        return hasilh
+
     ##### DONE #####
     def select_network(self, cari):
         print("hds")
@@ -125,7 +143,8 @@ class input_database:
         sqli = """
         INSERT INTO `tweet` 
         (`idJsonT`, `tweet`, `tanggal`, `Username`, `RT`, `SA`) 
-        VALUES (%s, %s, %s, %s, %s, %s);"""
+        VALUES (%s, %s, %s, %s, %s, %s);
+        """
         cursor.execute(sqli,(
             sd[0], #ID tweet
             sd[1], #tweet

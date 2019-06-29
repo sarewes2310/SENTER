@@ -23,9 +23,10 @@ class SENTET:
         NLP = NLP()
         getminedata = NLP.MineData(twitter, cari ,2)
         dp = NLP.ProsesStoreData(getminedata)
-        df = NLP.ProcessSentiment(getminedata)
-        dfs = NLP.ProcessHashtags(getminedata)
-        dft = NLP.ProcessTimestamp(getminedata)
+        #psn = dp[0].append(dp[1])
+        #df = NLP.ProcessSentiment(psn)
+        #dfs = NLP.ProcessHashtags(getminedata)
+        #dft = NLP.ProcessTimestamp(getminedata)
         
         """
         Proses Memasukan Data ke dalam Database sql
@@ -152,4 +153,9 @@ class SENTET:
     def hot_hashtag_all(cari):
         ID =  input_database()
         hasil = []
+        hasil = ID.select_hashtag_all()
+        gg.Graf(hasil)
+        hasil_all = {
+            'graf_image' : ''
+        }
         return hasil

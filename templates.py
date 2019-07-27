@@ -249,7 +249,7 @@ def api_world_cloud_all(version):
         return json.dumps(sentet.word_cloud_generate())
 
 """
-Endpoint worldcloud ALL
+Endpoint worldcloud DATE
 """
 @app.route("/api/<int:version>/wordcloud_date",methods=['POST'])
 def api_world_cloud_all_date(version):
@@ -259,6 +259,24 @@ def api_world_cloud_all_date(version):
         return json.dumps(sentet.word_cloud_generate_by_date(cari))
     else:
         return "Generate ERROR!!"
+
+"""
+Endpoint hot_hashtag ALL
+"""
+@app.route("/api/<int:version>/hothashtag_all", methods=['POST'])
+def api_hothashtag_all(version):
+    print("API HOT HASHTAG")
+    if request.method == 'POST':
+        print("TEST GAN")
+
+"""
+Endpoint hot_hashtag DATE
+"""
+@app.route("/api/<int:version>/hothashtag_date", methods=['POST'])
+def api_hothashtag_date(version):
+    print("API HOT HASHTAG")
+    if request.method == 'POST':
+        print("TEST GAN")
 
 """
 Main Program

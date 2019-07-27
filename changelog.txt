@@ -1,9 +1,9 @@
-1. enable search function
-2. fix redundant data on database 
-3. enable get all api from Database
-4. will update documentation on github
+1. enable search function (FIX)
+2. fix redundant data on database (FIX) 
+3. enable get all api from Database (half FIX)
+4. will update documentation on github (half FIX)
 
-#### TO-DO ####
+#### TO-DO ####y
 1. wordcloud image won't change (benerke om)
 2. about and Documentation still empty (tambahi om)
 3. Json terlalu rumit 

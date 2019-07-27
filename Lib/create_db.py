@@ -245,6 +245,7 @@ class input_database:
         NLP.an = Analiser(training_data='Lib/data/coba_train.csv')
         filename = 'model'
         NLP.an.load_model(filename)
+        CT = CleanTweet()
         for a in range(0,len(sdr)-1):
             id_jsonrt = sdr.iloc[a,1]
             id_jsont = sdr.iloc[a,0]['id_str']
@@ -287,7 +288,7 @@ class input_database:
                                     self.input_hashtag(i)
                                     hast = self.search_hashtag(i)
                                 value_training = [NLP.an.tfidf_data.transform(sdr.iloc[a,0]['full_text'])]
-                                data_tweet = [id_jsont,sdr.iloc[a,0]['full_text'],pd.to_datetime(sdr.iloc[a,0]['created_at']),
+                                data_tweet = [id_jsont,CT.clean_text_tweet(sdr.iloc[a,0]['full_text']),pd.to_datetime(sdr.iloc[a,0]['created_at']),
                                 sdr.iloc[a,0]['user']['screen_name'],sdr.iloc[a,0]['retweet_count'],NLP.an.testStrFromTrained(value_training)]
                                 self.input_tweet(data_tweet)
                                 tweetcari = self.search_tweet(id_jsont)

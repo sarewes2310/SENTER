@@ -80,7 +80,7 @@ class NLP:
     kemudian data sentiment tersebut digunakan pada 
     Class Graph_Generate  
     """
-    def ProcessSentiment(self, data):
+    def ProcessSentiment(self, Data):
         SentimentData = pd.DataFrame(columns=['ID','Date','Polarity'], dtype = float)
         for index,twit in enumerate(data):
             SentimentData = SentimentData.append(pd.DataFrame({'ID':[twit['id']],

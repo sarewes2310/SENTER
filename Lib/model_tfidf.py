@@ -24,6 +24,7 @@ class TFIDF:
 		self.fitData(corpus[1])
 
 	"""
+
 	Fungsi iniVectorizer berguna sebagai parameter
 	awal sebelum dataset olah, format data hampir sama 
 	dengan word2vec
@@ -42,6 +43,7 @@ class TFIDF:
 		)
 
 	"""
+	PROSES MENGGABUNGKAN DATA
 	Fungsi yang digunakan untuk menggabungkan array dengan index semua data
 	"""
 	def fitData(self, ydata):
@@ -56,12 +58,15 @@ class TFIDF:
 		return self.tfidf_vectorizer.transform([sent]).toarray()[0]
 
 	"""
-	Fungsi yang dipakai untuk mengambil semua data sentiment dan data text training
+	PROSES MENGAMBIL DATA
+	Fungsi yang dipakai untuk mengambil semua data sentiment 
+	dan data text training
 	"""
 	def getData(self):
 		return self.all_data
 
 	"""
+	PROSES MENGAMBIL DATA x
 	Fungsi yang digunakan hanya untuk mengambil data sentiment training
 	"""
 	def getOnlyX(self):

@@ -144,5 +144,5 @@ class NLP:
         StoreData = [df1, df2, DataJoin]
         df1.to_csv('Lib/export/RT.csv')
         df2.to_csv('Lib/export/T.csv')
-        DataJoin.to_csv('Lib/export/total.csv')
+        DataJoin.to_csv('Lib/export/total.csv') 
         return StoreData

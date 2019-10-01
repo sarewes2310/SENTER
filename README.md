@@ -2,7 +2,7 @@
 <br><br>
 SENTER adalah sebuah RESTful API yang berguna untuk menganalisa sebuah kalimat. Kalimat akan di kelompokan menjadi tiga kriteria, yaitu: postif, negatif, netral 
 # Getting Started
-Buat terlebih dahulu api pada halaman developer twitter https://apps.twitter.com. Registrasi aplikasi yang telah anda buat.
+Sebagai contoh menggunakan kalimat yang didapat dari twitter. Buat terlebih dahulu api pada halaman developer twitter https://apps.twitter.com. Registrasi aplikasi yang telah anda buat.
 Setelah berhasil simpan ```Consumer Key```, ```Consumer Secret```, ```Api Key ```, dan ```Api Secret Key``` yang didapat tab Apps.
 Kemudian isikan di file TwitterConfig.py
 

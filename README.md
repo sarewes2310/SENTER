@@ -29,3 +29,4 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 # API
 1. JSON graf network ```127.0.0.1:5000/ujiTampilan/json ```
 2. Get All Data berdasarkan pencaharian ```127.0.0.1:5000/getApiAll```
+3. JSON Chart ```127.0.0.1:5000/api/1/chart_all ```

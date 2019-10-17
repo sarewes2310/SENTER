@@ -27,6 +27,6 @@ twython, pandas, matplotlib, numpy, keras, tensorflow, scikit-learn, nltk, netwo
 2. buka browser url : ```127.0.0.1:5000```
 
 # API
-1. JSON graf network ```127.0.0.1:5000/ujiTampilan/json ```
-2. Get All Data berdasarkan pencaharian ```127.0.0.1:5000/getApiAll```
+1. JSON graf network ```127.0.0.1:5000/api/1/network_all ```
+2. Get All Data berdasarkan pencaharian ```127.0.0.1:5000/search```
 3. JSON Chart ```127.0.0.1:5000/api/1/chart_all ```
